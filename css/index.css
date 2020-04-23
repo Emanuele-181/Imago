@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+}
+
+.hero-image {
+
+    height: 100%;
+
+    background-image: url("../public/img/mountain.jpg");
+    filter: blur(4px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
