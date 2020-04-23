@@ -1,2 +1,2 @@
 # Imago
-Progetto Imago,
+Progetto Imago
