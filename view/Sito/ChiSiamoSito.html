@@ -1,16 +1,146 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <!-- Sezione Script -->
+        
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        
         <script type="text/javascript" lang="javascript" src="../css/bootstrap.min.css"></script>
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
-        <title>Questa è la pagina dedicata alla presentazione dei componenti del gruppo.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <!-- Sezione Stile -->
+        <style>
+            html {
+              box-sizing: border-box;
+            }
+            
+            /* * Mi seleziona tutti gli elementi */       
+            /* Box-sizing inherit fa in modo che vengano calcolate le dimensioni degli elementi in base allo spazio che occupano, andando ad ereditare dagli altri la 
+            grandezza Ottimale per far sì che le tre carte stiano nella stessa riga in modo ottimale */
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
+            
+            /* Stile delle varie colonne */
+            /* Uso di Padding-> padding: 25px 50px 75px 100px-> 25 dall'alto,50 da destra,75 dal basso, 100 da sinistra)  */
+            .column {
+              float: left;
+              width: 33.3%;
+              margin-bottom: 16px;
+              padding: 0 16px;
+              
+            }
+            
+            /* @media è una regola che adatta la visione delle colonne in base alla grandezza del display del dispositivo(rende il sito responsive) */
+            /* block blocca l'elemento su una riga */
+            @media screen and (max-width: 650px) {
+              .column {
+                width: 100%;
+                display: block;
+              }
+            }
+            
+            /* Box-shadow è l'ombra delle card, rgba è il colore */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Stile dei container delle card */
+            .container {
+              padding: 0 16px;
+            }
+            
+
+            /* after:ogni volta dove finisce un container o un row inserisco questo stile */
+            /* questa sezione mi allunga la parte di card bianca anche sotto i button */
+            .container::after, .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            
+            /* Stile del titolo */
+            .title {
+              color: grey;
+            }
+            
+            /* Stile dei bottoni delle card */
+            /* pointer è la freccia che diventa la mano di click su un link */
+            .button {
+              border: none;
+              outline: 0;
+              display: inline-block;
+              padding: 8px;
+              color: white;
+              background-color: #000;
+              text-align: center;
+              cursor: pointer;
+              width: 100%;
+            }
+            
+            .button:hover {
+              background-color: #555;
+            }
+            </style>
     </head>
 
     <body>
-        <h1>TO DO</h1>
-        <p>In questa pagina verranno presentati i componenti del gruppo. </p>
+        
+        <!-- Spiegazione: questa pagina è composta da 3 card sulla stessa riga row(div class), ad ogni colonna è associato un elemento di tipo div class card -->
+
+        <h2><center>Il nostro team</center></h2>
+        <center><p>Contattaci!</p></center>
+        <br>
+
+        <!-- Riga di disposizione delle card -->
+        <div class="row"> 
+
+            <!-- Card 1: Salvatore -->
+            <div class="column">
+                <div class="card">
+                    <img src="../../utility//Img//undraw_businessman_97x4.svg" alt="Salvatore" width="275" height="275" style="width:100%">
+                    <div class="container" >
+                        <h2>Salvatore Iorianni</h2>
+                        <p class="title">Studente Ingegneria Informatica</p>
+                        <p>La mia descrizione</p>
+                        <p>iorianni.1808542@studenti.uniroma1.it</p>
+                        <p><button class="button">Contattami</button></p>
+                        <p><button class="button">Il mio CV</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Jossef -->
+            <div class="column">
+                <div class="card">
+                    <img src="../../utility//Img//undraw_skateboard_d6or.svg" alt="Jossef" width="275" height="275" style="width:100%">
+                    <div class="container">
+                        <h2>Jossef Alabyad</h2>
+                        <p class="title">Studente Ingegneria Informatica</p>
+                        <p>La mia descrizione</p>
+                        <p>alabyad.1808542@studenti.uniroma1.it</p>
+                        <p><button class="button">Contattami</button></p>
+                        <p><button class="button">Il mio CV</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Emanuele -->
+            <div class="column">
+                <div class="card">
+                    <img src="../../utility//Img//undraw_videographer_nnc7.svg" alt="Emanuele" width="275" height="275" style="width:100%">
+                    <div class="container">
+                        <h2>Emanuele Bonifazi</h2>
+                        <p class="title">Studente Ingegneria Informatica</p>
+                        <p>La mia descrizione</p>
+                        <p>bonifazi.1808542@studenti.uniroma1.it</p>
+                        <p><button class="button">Contattami</button></p>
+                        <p><button class="button">Il mio CV</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
