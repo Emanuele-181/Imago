@@ -30,13 +30,13 @@ body {
 .titolo-principale {
     font-family: 'Ewert';
     color: rgb(231, 253, 255);
-    font-size: 140px;
+    font-size: 120px;
     text-shadow: 8px 8px 8px black;
     text-align: center;
 }
 
 .container{
-
+    
     position: relative;
     top: -50%;
     left: 50%;
@@ -44,10 +44,11 @@ body {
     z-index: 1;
     width: 90%;
     padding: 20px;
+    transition: all 0.8s;
 }
 
-.card-container{
-    height: 100%;
+
+.card-container{    
     display: flex;
     align-content: center;
     justify-content: center;
@@ -106,3 +107,72 @@ body {
             padding: 30px;
             
           }
+
+
+
+
+/* resize in base alla risoluzione */
+@media screen and (max-height:1080px){
+    #principale {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    @media screen and (max-height: 720px){
+        #principale {
+            transform: translate(-50%, -50%) scale(0.6);
+        }
+
+        @media screen and (max-height: 480px){
+            #principale {
+                transform: translate(-50%, -50%) scale(0.4);
+            }
+        }
+    }
+}
+
+/* adattamento alla visualizzazione verticale */
+@media screen and (max-aspect-ratio: 13/16){
+    
+    .titolo-principale{
+        margin: 0px;
+    }
+
+    .hero-image{
+        background-size: cover;
+    }
+
+    .card-container{
+        display: grid;
+        justify-content: center;
+    }
+    .card{
+        height: 300px;
+        width: 500px;
+        margin-bottom: 5px;
+    }
+
+    @media screen and (max-height:1200px){
+        #principale {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+    
+        @media screen and (max-height: 1080px){
+            #principale {
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+    
+            @media screen and (max-height: 900px){
+                #principale {
+                    transform: translate(-50%, -50%) scale(0.6);
+                }
+
+                @media screen and (max-height: 720px){
+                    #principale {
+                        transform: translate(-50%, -50%) scale(0.4);
+                    }
+                }
+            }
+        }
+    }
+
+}
