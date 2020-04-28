@@ -8,12 +8,72 @@
         <script type="text/javascript" lang="javascript" src="../css/bootstrap.min.css"></script>
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <script type="text/javascript" lang="javascript" src="../css/bootstrap.min.css"></script>
+        <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
+        <title>Questa è la pagina dedicata alla storia della fotografia.</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+        
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         
 
         <!-- Sezione Stile -->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
+        
+            
+        @media (max-width: 640px) { 
+.classeTesto {font-size:4rem; padding:60% 0 0 0} 
+} 
 
+@media (min-width: 641px) { 
+.classeTesto {font-size:5.1rem;padding: 28% 0 0 0;}
+
+} 
+
+@media (min-width:960px) { 
+.classeTesto {font-size:6rem;padding:22% 0 0 0} 
+} 
+
+@media (min-width:1100px) { 
+.classeTesto {font-size:8rem;padding:13% 0 0 0}
+} 
+    
+    .view {
+        background: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")repeat-x center center;
+        
+         
+         }
+         @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+   /* per mettere REGISTRAZIONE a destra */
+    .row{
+        padding: 0 16px;
+    }
+    /* per mettere la linea verticale tra LOGIN e REGISTRAZIONE */
+    /* float specifica dove l'elemento viene disposto*/
+    div.sinistra, div.destra {
+        float: left;
+        width: 50%
+        
+    }
+    div.sinistra {
+        border-right: 1px solid #000;
+        padding-right: 20px;
+    }
+    div.destra {
+        padding-left: 20px;
+    }
       
             html {
                 font-family: raleway;
@@ -29,7 +89,7 @@
             
             /* Stile delle varie colonne */
             /* Uso di Padding-> padding: 25px 50px 75px 100px-> 25 dall'alto,50 da destra,75 dal basso, 100 da sinistra)  */
-            .column {
+            .column1 {
               float: left;
               width: 33.3%;
               margin-bottom: 16px;
@@ -40,7 +100,7 @@
             /* @media è una regola che adatta la visione delle colonne in base alla grandezza del display del dispositivo(rende il sito responsive) */
             /* block blocca l'elemento su una riga */
             @media screen and (max-width: 650px) {
-              .column {
+              .column1 {
                 width: 100%;
                 display: block;
               }
@@ -55,6 +115,7 @@
             /* Stile dei container delle card */
             .container {
               padding: 0 16px;
+              font-family: raleway;
             }
             
 
@@ -95,58 +156,187 @@
         
         <!-- Spiegazione: questa pagina è composta da 3 card sulla stessa riga row(div class), ad ogni colonna è associato un elemento di tipo div class card -->
         
-        <h1 ><center>Il Nostro Team</center></h2>
+        <!--Creo la navbar-->
+    <nav class="navbar navbar-expand-sm "style="z-index:1" >
+      <!--Creo il buttone mobile-->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Rende la navbar stabile-->
+      <div class="collapse navbar-collapse" id="collapse_target">
+      <!--Creo il logo-->
+      <a class="navbar-brand" href=""> <img=""></a>
+      <!--Creo i link a sinistra-->
+      <ul class="navbar-nav">
+         
+          <li class="nav-item">
+          <a class="bordo" href="HomeSito.html" style="margin-right:30px; font-size: 28px; font-family: 'Poiret One', cursive; color: white;font-weight: bold"> HOME </a>
+         </li>
 
+         <li class="nav-item">
+          <a class="bordo" href="CorsoSito.html"style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;"> CORSO </a>
+         </li>
+
+         <li class="nav-item">
+          <a class="bordo" href="ToolSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TOOL </a>
+         </li>
+
+         <li class="nav-item">
+          <a class="bordo" href="StoriaSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">STORIA</a>
+         </li>
+          
+         <li class="nav-item">
+          <a class="bordo" href="TutorialSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TUTORIAL</a>
+         </li>
+ 
+          <li class="nav-item">
+           <a class="bordo" href="ChiSiamoSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">CHI SIAMO</a>
+          </li>
+      
+      </ul>
+ </div>
+ <!--Creo i link a destra-->
+ <div class=" nav-item" data-toggle="modal" data-target="#logReModal">
+      <a> <i class="btn fas fa-users nav-link" style="font-size:40px; color:white;">  </i></a>
+ </div>
+
+ </nav>
+ <!--
+      -"Dialog" usata per creare una finestra che appare sopra il contenuto della pagina
+      - "Modal" classe bootstrap che permette la creazione della finestra dialog
+      - "Modal fade" permette di nascondere la finestra prima che viene richiesta
+  -->
+  <div class="modal fade" role="dialog" id="logReModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             
+        <div class="row">
+                 <!--Log in-->
+                 <div class="sinistra">
+                <div class="column">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login</h3>
+                    </div>
+           
+                    <div class="modal-body">
+                         <div class="form-group">
+                             <input type="email" name="emailLog" class="form-control" placeholder="Email">
+                        </div>
+                         <div class="form-group">
+                            <input type="password" name="passwordLog" class="form-control" placeholder="Password">
+                        </div>
+
+                       
+                        <a class="text-center">  <button type="submit" class="btn  btn-dark">Sign In</button>  </a>
+                        
+                    </div>
         
-        <br>
+                </div>
+                </div>
 
-        <!-- Riga di disposizione delle card -->
+
+                 <!--Registrazione-->
+                 <div class="destra">
+                <div class="column">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Registrazione</h3>
+                        <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                    </div>
+           
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="nome" class="form-control" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="cognome" class="form-control" placeholder="Cognome">
+                        </div>
+                         <div class="form-group">
+                            <input type="email" name="emailRe" class="form-control" placeholder="Email">
+                        </div>
+                         <div class="form-group">
+                            <input type="password" name="passwordRe" class="form-control" placeholder="Password">
+                        </div>
+                        
+                        <button type="submit" class="btn  btn-dark">Registrati</button>
+                   
+                        
+                    </div>
+                 </div>
+                </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+      <div class="view intro hm-purple-light" style="height: 370px;width:100%; position: absolute;top:0px;">
+      <h1 class="classeTesto"align="right" style="color:rgb(53, 26, 128);font-family: 'Spartan', sans-serif; ">TEAM</h1></div>
+      
+      
+          
+      <main  style=" background-color: rgba(255, 250, 205, 0.459);">
+
+          <div class="container" style="padding:260px 0 0 0">
+              <div class="row">
+                  <div style="font-family: 'Spartan', sans-serif; font-size: 20px;">
+                    <!-- Riga di disposizione delle card -->
         <div class="row"> 
 
-            <!-- Card 1: Salvatore -->
-            <div class="column">
-                <div class="card">
-                    <img src="../../utility//Img//undraw_businessman_97x4.svg" alt="Salvatore" width="275" height="275" style="width:100%">
-                    <div class="container" >
-                        <h2>Salvatore Iorianni</h2>
-                        <p class="title">Studente Ingegneria Informatica</p>
-                        <p>La mia descrizione</p>
-                        <p>iorianni.1808542@studenti.uniroma1.it</p>
-                        <p><button class="button">Contattami</button></p>
-                        <p><button class="button">Il mio CV</button></p>
-                    </div>
-                </div>
-            </div>
+          <!-- Card 1: Salvatore -->
+          <div class="column1">
+              <div class="card">
+                  <img src="../../utility//Img//undraw_businessman_97x4.svg" alt="Salvatore" width="275" height="275" style="width:100%">
+                  <div class="container" >
+                      <h2>Salvatore Iorianni</h2>
+                      <p class="title">Studente Ingegneria Informatica</p>
+                      <p>La mia descrizione</p>
+                      <p>iorianni.1808542@studenti.uniroma1.it</p>
+                      <p><button class="button">Contattami</button></p>
+                      <p><button class="button">Il mio CV</button></p>
+                  </div>
+              </div>
+          </div>
 
-            <!-- Card 2: Jossef -->
-            <div class="column">
-                <div class="card">
-                    <img src="../../utility//Img//undraw_skateboard_d6or.svg" alt="Jossef" width="275" height="275" style="width:100%">
-                    <div class="container">
-                        <h2>Jossef Alabyad</h2>
-                        <p class="title">Studente Ingegneria Informatica</p>
-                        <p>La mia descrizione</p>
-                        <p>alabyad.1808542@studenti.uniroma1.it</p>
-                        <p><button class="button">Contattami</button></p>
-                        <p><button class="button">Il mio CV</button></p>
-                    </div>
-                </div>
-            </div>
+          <!-- Card 2: Jossef -->
+          <div class="column1">
+              <div class="card">
+                  <img src="../../utility//Img//undraw_skateboard_d6or.svg" alt="Jossef" width="275" height="275" style="width:100%">
+                  <div class="container">
+                      <h2>Jossef Alabyad</h2>
+                      <p class="title">Studente Ingegneria Informatica</p>
+                      <p>La mia descrizione</p>
+                      <p>alabyad.1808542@studenti.uniroma1.it</p>
+                      <p><button class="button">Contattami</button></p>
+                      <p><button class="button">Il mio CV</button></p>
+                  </div>
+              </div>
+          </div>
 
-            <!-- Card 3: Emanuele -->
-            <div class="column">
-                <div class="card">
-                    <img src="../../utility//Img//undraw_videographer_nnc7.svg" alt="Emanuele" width="275" height="275" style="width:100%">
-                    <div class="container">
-                        <h2>Emanuele Bonifazi</h2>
-                        <p class="title">Studente Ingegneria Informatica</p>
-                        <p>La mia descrizione</p>
-                        <p>bonifazi.1808542@studenti.uniroma1.it</p>
-                        <p><button class="button">Contattami</button></p>
-                        <p><button class="button">Il mio CV</button></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <!-- Card 3: Emanuele -->
+          <div class="column1">
+              <div class="card">
+                  <img src="../../utility//Img//undraw_videographer_nnc7.svg" alt="Emanuele" width="275" height="275" style="width:100%">
+                  <div class="container">
+                      <h2>Emanuele Bonifazi</h2>
+                      <p class="title">Studente Ingegneria Informatica</p>
+                      <p>La mia descrizione</p>
+                      <p>bonifazi.1808542@studenti.uniroma1.it</p>
+                      <p><button class="button">Contattami</button></p>
+                      <p><button class="button">Il mio CV</button></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+                  </div>
+              </div>
+          </div>
+
+          
+      
+      </main> 
+
+        
+        
+
+        
     </body>
 </html>
