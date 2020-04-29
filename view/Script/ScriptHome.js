@@ -1,0 +1,3 @@
+function fpolaroid(){
+    alert("CIAO");
+}
