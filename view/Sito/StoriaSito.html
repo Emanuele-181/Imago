@@ -22,7 +22,9 @@
         <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
         
-            
+            .sfondo{background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));
+            }
+        
                 @media (max-width: 640px) { 
 .classeTesto {font-size:4rem; padding:34% 0 0 0} 
 } 
@@ -52,6 +54,16 @@
             }
             /* per mettere la linea verticale tra LOGIN e REGISTRAZIONE */
             /* float specifica dove l'elemento viene disposto*/
+
+            .nosito{
+                 font-size: 25px;
+             }
+             .nosito:hover, .nosito:active,  .home:hover, .home:active  {
+                 font-size: 250%
+             } 
+             .home{
+                 font-size: 28px;
+             }
             div.sinistra, div.destra {
                 float: left;
                 width: 50%
@@ -69,7 +81,7 @@
            
     </head>
 
-    <body>
+    <body class="sfondo">
         <!--Creo la navbar-->
     <nav class="navbar navbar-expand-sm "style="z-index:1" >
         <!--Creo il buttone mobile-->
@@ -84,27 +96,27 @@
         <ul class="navbar-nav">
            
             <li class="nav-item">
-            <a class="bordo" href="HomeSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;font-weight: bold"> HOME </a>
+            <a class="home" href="HomeSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;"> HOME </a>
            </li>
 
            <li class="nav-item">
-            <a class="bordo" href="CorsoSito.html"style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;"> CORSO </a>
+            <a class="nosito" href="CorsoSito.html"style="margin-right:30px; font-family: 'Poiret One', cursive; color: white; text-decoration: none;"> CORSO </a>
            </li>
 
            <li class="nav-item">
-            <a class="bordo" href="ToolSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TOOL </a>
+            <a class="nosito" href="ToolSito.html" style="margin-right:30px; font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TOOL </a>
            </li>
 
            <li class="nav-item">
-            <a class="bordo" href="StoriaSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">STORIA</a>
+            <a href="StoriaSito.html" style="margin-right:30px; font-size: 32px; font-family: 'Poiret One', cursive; color: white;  font-weight: bold; "> <u>STORIA</u></a>
            </li>
             
            <li class="nav-item">
-            <a class="bordo" href="TutorialSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TUTORIAL</a>
+            <a class="nosito" href="TutorialSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TUTORIAL</a>
            </li>
    
             <li class="nav-item">
-             <a class="bordo" href="ChiSiamoSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">CHI SIAMO</a>
+             <a class="nosito" href="ChiSiamoSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">CHI SIAMO</a>
             </li>
         
         </ul>
@@ -187,8 +199,7 @@
         
         
             
-        <main class="text-center py-5" style=" background-color: rgba(255, 250, 205, 0.459);">
-
+        
             <div class="container" style="padding:300px 0 0 0">
                 <div class="row">
                     <div style="font-family: 'Spartan', sans-serif; font-size: 20px;">
@@ -224,7 +235,7 @@ In copertina: Francis Frith, ‘Statues of the Plain, Thebes’, 1857
 
             
         
-        </main> 
+       
         
     </body>
 </html>
