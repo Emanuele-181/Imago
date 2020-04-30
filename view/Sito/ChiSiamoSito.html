@@ -18,7 +18,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-        
+        <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptHome.js"></script>
+
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         
@@ -85,25 +86,288 @@
         width: 100vw;
          
          }
+         /*font navbar e citazione*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+            /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
          @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
    /* per mettere REGISTRAZIONE a destra */
-    .row{
-        padding: 0 16px;
+     /*su d g si*/
+     .row{
+                padding:0 16px;
+
+             }
+             .column{
+                 
+                height: 360px;
+                
+             }
+
+             .nosito{
+                 font-size: 25px;
+                 transition: all 0.3s;
+             }
+             .nosito:hover {
+                 text-shadow: 0px 0px 4px  rgb(245, 225, 200);
+                 font-weight: bold;
+                 
+                
+             }
+             
+             /*show gallery*/
+             
+             .slider{
+
+                width: auto;
+                height: 600px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: url(../../utility/Img/im1.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: slide 10s infinite;
+                text-align: center;
+             }
+
+            /*script per slideshow*/
+            @keyframes slide{
+               
+               
+               25% {
+                    background: url(../../utility/Img/im2.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                }
+               
+               50% {
+                    background: url(../../utility/Img/im3.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                }
+             
+                75%{
+                    background: url(../../utility/Img/im4.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                }
+               
+               100% {
+                    background: url(../../utility/Img/im1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    text-align: center;
+                }
+            }
+           
+            /*popup*/
+    .overlay{
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+   
+}
+
+.overlay.open{
+    display: flex;
+    animation: show-overlay 0.5s;
+}
+
+@keyframes show-overlay{
+    0%{
+        opacity: 0;
     }
-    /* per mettere la linea verticale tra LOGIN e REGISTRAZIONE */
-    /* float specifica dove l'elemento viene disposto*/
-    div.sinistra, div.destra {
-        float: left;
-        width: 50%
-        
+    100%{
+        opacity: 1;
     }
-    div.sinistra {
-        border-right: 1px solid #000;
-        padding-right: 20px;
+}
+
+.login{
+    padding: 125px 25px;
+    background: white;
+    border-radius: 10px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 4px solid black;
+    
+}
+
+.registrazione{
+    padding: 50px 25px;
+    background: rgb(245, 225, 200);
+    border-radius: 10px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 4px solid black;
+
+
+}
+.header{
+    position: relative;
+}
+
+.header_re{
+    position: relative;
+}
+
+.header h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 7px;
+    border-bottom: 2px solid black;
+}
+
+.header_re h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 7px;
+    border-bottom: 2px solid black;
+}
+
+.header_re i{
+    position: absolute;
+    bottom: 70px;
+    left: 319px;
+    font-size: 20px;
+    color: black;
+}
+
+.body .form input{
+    display: block;
+    padding: 10px;
+    margin: 25px 10px;
+    font-size: 17px;
+    outline: none;
+    border: solid black 1px;
+    color: black;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+.body_re .form_re input{
+    display: block;
+    padding: 10px;
+    margin: 25px 50px;
+    font-size: 18px;
+    outline: none;
+    border: solid black 1px;
+    color: black;
+    transition: 0.4s;
+    border-radius: 8px;
+    
+}
+
+.body .form input:focus{
+    border-color: rgba(224, 127, 36, 0.979);
+    border-width: 1px;
+}
+
+.body_re .form_re input:focus{
+    border-color: rgba(224, 127, 36, 0.979);
+    border-width: 1px;
+}
+
+.footer{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+.footer_re{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.footer button{
+    position: absolute;
+    padding: 10px;
+    min-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+.footer_re button{
+    position: absolute;
+    padding: 10px;
+    min-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+.footer button{
+    background-color: rgb(26, 24, 24);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+.footer_re button{
+    background-color: rgb(26, 24, 24);
+    color: white;
+    text-transform: uppercase;
+     font-family: 'Poiret One', cursive;
+}
+.footer button:hover{
+    background: rgb(219, 219, 219);
+}
+.footer_re button:hover{
+    background: rgb(219, 219, 219);
+}
+
+/*script polaroid*/
+.fotopop{
+    position: absolute;
+    padding: 0 0 0 1200px;
+    top: 1000px;
+    display: none;
+    
+}
+.fotopop i{
+    position: absolute;
+    bottom: 600px;
+    right: 180px;
+    font-size: 20px;
+    color: black;
+}
+.fotopop.open{
+    display: flex;
+    animation: show-fotopop 0.5s;
+}
+
+
+@keyframes show-fotopop{
+    0%{
+        opacity: 0;
     }
-    div.destra {
-        padding-left: 20px;
+    100%{
+        opacity: 1;
     }
+}
+
+.flash:active{
+    background-color: rgb(240, 245, 170);
+    border-radius: 500px;
+  
+
+}
       
             html {
                 font-family: raleway;
@@ -186,118 +450,109 @@
         
         <!-- Spiegazione: questa pagina è composta da 3 card sulla stessa riga row(div class), ad ogni colonna è associato un elemento di tipo div class card -->
         
-        <!--Creo la navbar-->
-    <nav class="navbar navbar-expand-sm "style="z-index:1" >
-      <!--Creo il buttone mobile-->
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <!--Rende la navbar stabile-->
-      <div class="collapse navbar-collapse" id="collapse_target">
-      <!--Creo il logo-->
-      <a class="navbar-brand" href=""> <img=""></a>
-      <!--Creo i link a sinistra-->
-      <ul class="navbar-nav">
-         
-          <li class="nav-item">
-          <a class="bordo" href="HomeSito.html" style="margin-right:30px; font-size: 28px; font-family: 'Poiret One', cursive; color: white;font-weight: bold"> HOME </a>
-         </li>
-
-         <li class="nav-item">
-          <a class="bordo" href="CorsoSito.html"style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;"> CORSO </a>
-         </li>
-
-         <li class="nav-item">
-          <a class="bordo" href="ToolSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TOOL </a>
-         </li>
-
-         <li class="nav-item">
-          <a class="bordo" href="StoriaSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">STORIA</a>
-         </li>
-          
-         <li class="nav-item">
-          <a class="bordo" href="TutorialSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">TUTORIAL</a>
-         </li>
- 
-          <li class="nav-item">
-           <a class="bordo" href="ChiSiamoSito.html" style="margin-right:30px; font-size: 25px; font-family: 'Poiret One', cursive; color: white;">CHI SIAMO</a>
-          </li>
-      
-      </ul>
- </div>
- <!--Creo i link a destra-->
- <div class=" nav-item" data-toggle="modal" data-target="#logReModal">
-      <a> <i class="btn fas fa-users nav-link" style="font-size:40px; color:white;">  </i></a>
- </div>
-
- </nav>
- <!--
-      -"Dialog" usata per creare una finestra che appare sopra il contenuto della pagina
-      - "Modal" classe bootstrap che permette la creazione della finestra dialog
-      - "Modal fade" permette di nascondere la finestra prima che viene richiesta
-  -->
-  <div class="modal fade" role="dialog" id="logReModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-             
-        <div class="row">
-                 <!--Log in-->
-                 <div class="sinistra">
-                <div class="column">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Login</h3>
-                    </div>
+       <!--Creo la navbar-->
+    <nav class="navbar navbar-expand-md" style="z-index: 1;">
+        <!--Creo il buttone mobile-->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Rende la navbar stabile-->
+        <div class="collapse navbar-collapse" id="collapse_target">
+        <!--Creo il logo-->
+        <a class="navbar-brand" href=""> <img=""></a>
+        <!--Creo i link a sinistra-->
+        <ul class="navbar-nav">
            
-                    <div class="modal-body">
-                         <div class="form-group">
-                             <input type="email" name="emailLog" class="form-control" placeholder="Email">
-                        </div>
-                         <div class="form-group">
-                            <input type="password" name="passwordLog" class="form-control" placeholder="Password">
-                        </div>
+            <li class="nav-item">
+                <a class="nosito" href="HomeSito.html"style="margin-right:30px; font-size:32px; font-family: 'Poiret One', cursive; color: white; text-decoration: none;"> HOME </a>
+           </li>
 
-                       
-                        <a class="text-center">  <button type="submit" class="btn  btn-dark">Sign In</button>  </a>
-                        
-                    </div>
+           
+           <li class="nav-item">
+            <a class="nosito" href="CorsoSito.html"style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;"> CORSO </a>
+           </li>
+
+           <li class="nav-item">
+            <a  class="nosito" href="ToolSito.html" style=" margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TOOL </a>
+           </li>
+
+           <li class="nav-item">
+            <a  class="nosito" href="StoriaSito.html" style="margin-right:30px;   font-family: 'Poiret One', cursive; color: white; text-decoration: none;">STORIA</a>
+           </li>
+            
+           <li class="nav-item">
+            <a class="nosito" href="TutorialSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TUTORIAL</a>
+           </li>
+   
+           <li class="nav-item">
+            <a href="ChiSiamoSito.html" style="margin-right:30px; font-size: 32px;  font-family: 'Poiret One', cursive; color: white; font-weight: bold;"> <u>CHI SIAMO</u> </a>
+           </li>
+            
+           
         
-                </div>
-                </div>
+        </ul>
+   </div>
+   <!--Creo i link a destra-->
+   <div class="nav-item" onclick="toggleLogin()" >
+        <a> <i class="btn fas fa-users nav-link" style="font-size:60px; color:white;">  </i></a>
+   </div>
 
+   </nav>
 
-                 <!--Registrazione-->
-                 <div class="destra">
-                <div class="column">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Registrazione</h3>
-                        <button type="button" class="close" data-dismiss="modal"> &times;</button>
-                    </div>
-           
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input type="text" name="nome" class="form-control" placeholder="Nome">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="cognome" class="form-control" placeholder="Cognome">
-                        </div>
-                         <div class="form-group">
-                            <input type="email" name="emailRe" class="form-control" placeholder="Email">
-                        </div>
-                         <div class="form-group">
-                            <input type="password" name="passwordRe" class="form-control" placeholder="Password">
-                        </div>
-                        
-                        <button type="submit" class="btn  btn-dark">Registrati</button>
-                   
-                        
-                    </div>
-                 </div>
-                </div>
+  
 
+   
+
+    <!--
+        -"Dialog" usata per creare una finestra che appare sopra il contenuto della pagina
+        - "Modal" classe bootstrap che permette la creazione della finestra dialog
+        - "Modal fade" permette di nascondere la finestra prima che viene richiesta
+    -->
+    <div class="overlay">
+        <table class="tabpop" cellspacing=”0″ cellpadding=”0″>
+            <tr>
+                <th>
+        <div class="login">
+            <div class="header">
+                <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
+            </div>
+            <div class="body">
+                <form action="#" class="form">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                </form>
+            </div>
+            <div class="footer">
+                <button>Login</button>
+            </div>
         </div>
-      </div>
+                </th>
+                <th>
+                    <div class="registrazione">
+                        <div class="header_re">
+                            <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Registrazione</h1> <i class="fas fa-times"  style="cursor: pointer;"onclick="toggleLogin()"></i>
+                        </div>
+                        
+                        <div class="body_re">
+                            <form action="#" class="form_re">
+                                <center>
+                                <input type="text" placeholder="Nome">
+                                <input type="text" placeholder="Cognome">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                </center>
+                            </form>
+                        </div>
+                        <div class="footer_re">
+                            <button> Registrazione</button>
+                        </div>
+                    </div>
+    
+                </th>
+            </tr>
+        </table>
     </div>
-</div>
+    
       <div class="view intro hm-purple-light" style="height: 370px;width:100%; position: absolute;top:0px;">
       <h1 class="classeTesto"align="right" style="color:rgb(53, 26, 128);font-family: 'Spartan', sans-serif; ">TEAM</h1></div>
       
@@ -306,10 +561,10 @@
       <main  style=" background-color: rgba(255, 250, 205, 0.459); min-height: 100%;">
 
           <div class="container" style="padding:300px 0 0 0">
-              <div class="row">
+              <div class="row1">
                   <div style="font-family: 'Spartan', sans-serif; font-size: 20px;">
                     <!-- Riga di disposizione delle card -->
-        <div class="row"> 
+        <div class="row1"> 
 
           <!-- Card 1: Salvatore -->
           <div class="column1">
