@@ -31,18 +31,19 @@
 
         <style>
 
-           
+          
             /*font navbar e citazione*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
             /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-            
+            html, body{
+                min-height: 100%;
+            }
             .sfondo{
                 
                 background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));
-                height: 100%;
-                width: 100%;
                
-                }
+            }
+            
                 
           
              /*su d g si*/
@@ -58,9 +59,13 @@
 
              .nosito{
                  font-size: 25px;
+                 transition: all 0.3s;
              }
-             .nosito:hover, .nosito:active {
-                 font-size: 250%
+             .nosito:hover {
+                 text-shadow: 0px 0px 4px  rgb(245, 225, 200);
+                 font-weight: bold;
+                 
+                
              }
              
              /*show gallery*/
@@ -114,7 +119,212 @@
                 }
             }
            
-          </style>
+            /*popup*/
+    .overlay{
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+   
+}
+
+.overlay.open{
+    display: flex;
+    animation: show-overlay 0.5s;
+}
+
+@keyframes show-overlay{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.login{
+    padding: 125px 25px;
+    background: white;
+    border-radius: 10px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 4px solid black;
+    
+}
+
+.registrazione{
+    padding: 50px 25px;
+    background: rgb(245, 225, 200);
+    border-radius: 10px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 4px solid black;
+
+
+}
+.header{
+    position: relative;
+}
+
+.header_re{
+    position: relative;
+}
+
+.header h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 7px;
+    border-bottom: 2px solid black;
+}
+
+.header_re h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    padding-bottom: 7px;
+    border-bottom: 2px solid black;
+}
+
+.header_re i{
+    position: absolute;
+    bottom: 70px;
+    left: 319px;
+    font-size: 20px;
+    color: black;
+}
+
+.body .form input{
+    display: block;
+    padding: 10px;
+    margin: 25px 10px;
+    font-size: 17px;
+    outline: none;
+    border: solid black 1px;
+    color: black;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+.body_re .form_re input{
+    display: block;
+    padding: 10px;
+    margin: 25px 50px;
+    font-size: 18px;
+    outline: none;
+    border: solid black 1px;
+    color: black;
+    transition: 0.4s;
+    border-radius: 8px;
+    
+}
+
+.body .form input:focus{
+    border-color: rgba(224, 127, 36, 0.979);
+    border-width: 1px;
+}
+
+.body_re .form_re input:focus{
+    border-color: rgba(224, 127, 36, 0.979);
+    border-width: 1px;
+}
+
+.footer{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+.footer_re{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.footer button{
+    position: absolute;
+    padding: 10px;
+    min-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+.footer_re button{
+    position: absolute;
+    padding: 10px;
+    min-width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+.footer button{
+    background-color: rgb(26, 24, 24);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+.footer_re button{
+    background-color: rgb(26, 24, 24);
+    color: white;
+    text-transform: uppercase;
+     font-family: 'Poiret One', cursive;
+}
+.footer button:hover{
+    background: rgb(219, 219, 219);
+}
+.footer_re button:hover{
+    background: rgb(219, 219, 219);
+}
+
+/*script polaroid*/
+.fotopop{
+    position: absolute;
+    padding: 0 0 0 1200px;
+    top: 1000px;
+    display: none;
+    
+}
+.fotopop i{
+    position: absolute;
+    bottom: 600px;
+    right: 180px;
+    font-size: 20px;
+    color: black;
+}
+.fotopop.open{
+    display: flex;
+    animation: show-fotopop 0.5s;
+}
+
+
+@keyframes show-fotopop{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.flash:active{
+    background-color: rgb(240, 245, 170);
+    border-radius: 500px;
+  
+
+}
+ </style>
 
 </head>
 <body class="sfondo">
@@ -142,7 +352,7 @@
            </li>
 
            <li class="nav-item">
-            <a  class="nosito" href="ToolSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TOOL </a>
+            <a  class="nosito" href="ToolSito.html" style=" margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TOOL </a>
            </li>
 
            <li class="nav-item">
@@ -161,7 +371,7 @@
         </ul>
    </div>
    <!--Creo i link a destra-->
-   <div class="nav-item" data-toggle="modal" data-target="#logReModal">
+   <div class="nav-item" onclick="toggleLogin()" >
         <a> <i class="btn fas fa-users nav-link" style="font-size:60px; color:white;">  </i></a>
    </div>
 
@@ -181,81 +391,83 @@
         - "Modal" classe bootstrap che permette la creazione della finestra dialog
         - "Modal fade" permette di nascondere la finestra prima che viene richiesta
     -->
-    <div class="modal fade" role="dialog" id="logReModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                 
-            <div class="row" style="border-color: black;">
-                     <!--Log in-->
-                     
-                    <div class="column" >
-                        <div class="modal-header" style="border-color: black; ">
-                            <h3 class="modal-title" style="font-weight: bold;">Login</h3>
-                           
-                        </div>
-                       
-                        <div class="modal-body">
-                             <div class="form-group" >
-                                 <input style="border-color: black;" type="email" name="emailLog" class="form-control" placeholder="Email">
-                            </div>
-                             <div class="form-group">
-                                <input style="border-color: black;" type="password" name="passwordLog" class="form-control" placeholder="Password">
-                            </div>
-
-                           
-                            <a class="text-center">  <button type="submit" class="btn  btn-dark">Sign In</button>  </a>
-                            
-                        </div>
-            
-                    </div>
-                 
-
-    
-                     <!--Registrazione-->
-                   
-                    <div class="column" style= "position: absolute; right: 0;" >
-                        <div class="modal-header" style="border-color: black;  background-color: rgb(245, 225, 200);">
-                            <h3 class="modal-title" style="font-weight: bold;">Registrazione</h3>
-                            <button style="border-color: black; " type="button" class="close" data-dismiss="modal"> &times;</button>
-                        </div>
-               
-                        <div class="modal-body" style=" background-color: rgb(245, 225, 200);">
-                            <div class="form-group">
-                                <input style="border-color: black;" type="text" name="nome" class="form-control" placeholder="Nome">
-                            </div>
-                            <div class="form-group">
-                                <input style="border-color: black;" type="text" name="cognome" class="form-control" placeholder="Cognome">
-                            </div>
-                             <div class="form-group">
-                                <input style="border-color: black;" type="email" name="emailRe" class="form-control" placeholder="Email">
-                            </div>
-                             <div class="form-group">
-                                <input style="border-color: black;" type="password" name="passwordRe" class="form-control" placeholder="Password">
-                            </div>
-                            
-                            <button type="submit" class="btn  btn-dark">Registrati</button>
-                       
-                            
-                        </div>
-                     </div>
-                </div>
-          </div>
+    <div class="overlay">
+        <table class="tabpop" cellspacing=”0″ cellpadding=”0″>
+            <tr>
+                <th>
+        <div class="login">
+            <div class="header">
+                <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
+            </div>
+            <div class="body">
+                <form action="#" class="form">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                </form>
+            </div>
+            <div class="footer">
+                <button>Login</button>
+            </div>
         </div>
+                </th>
+                <th>
+                    <div class="registrazione">
+                        <div class="header_re">
+                            <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Registrazione</h1> <i class="fas fa-times"  style="cursor: pointer;"onclick="toggleLogin()"></i>
+                        </div>
+                        
+                        <div class="body_re">
+                            <form action="#" class="form_re">
+                                <center>
+                                <input type="text" placeholder="Nome">
+                                <input type="text" placeholder="Cognome">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                </center>
+                            </form>
+                        </div>
+                        <div class="footer_re">
+                            <button> Registrazione</button>
+                        </div>
+                    </div>
+    
+                </th>
+            </tr>
+        </table>
     </div>
-
+    
     <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; margin-top: 600px;" >“La fotografia ha la capacità di fornire immagini dell'uomo <br> e del suo ambiente che sono insieme opere d'arte <br> e momenti di storia.”</p>
     
     
-   <table align="center">
+   <table>
     <tr>
         <th>
-            <img src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()"> <br>
+           <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(143, 133, 133);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
         </th>
         <th>
-            <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(143, 133, 133);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
+            <div>
+                 
+                <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">   
+            </div>
         </th>
     </tr> 
 </table>
+
+<div class="fotopop">
+    <table>
+        <th>
+            <tr>
+                <img src="../../utility/Img/foto.jpg" > 
+            </tr>
+            <tr>
+                <i class="fas fa-times"  style="cursor: pointer;"onclick="fpolaroid()"></i>
+            </tr>
+        </th>
+
+    </table>
+    
+
+</div>
    
     
 </body>
