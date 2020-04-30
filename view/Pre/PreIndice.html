@@ -5,6 +5,9 @@
     <head>
        <title>Imago</title>
 
+        <!-- Link agli scripts -->
+        <script src="../Script/cookies.js"></script>
+
        <!-- Link al file css specifico per questa pagina. Ne ho usato uno apposito perchè lo
        stile è completamente diverso da quello di bootstrap. -->
        <link rel="stylesheet" href="../../css/PreIndice.css">
@@ -12,6 +15,8 @@
         <!-- Importazione fonts Google -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ewert">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One">
+
 
         <!-- Sript per il reindirizzamento senza tag a. 
         viene invocata al clic delle card. -->
@@ -39,13 +44,13 @@
                 <div id="card1" class="card" onclick="redirect('../'+'Sito'+'/'+'HomeSito.html')">
                     <div class="hero-image-card" style="background-image: url(../../public/img/tramonto.jpg);"></div>
                     <div class="container">
-                        <h1 class="card-font">Non me ricordo</h1>
-                        <p>Testo che descrive cosa c'è qui</p>
+                        <h1 class="card-font">Home</h1>
+                        <p>Descrizione da mettere per la pagina Home.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div id="card2" class="card" onclick="redirect('https:/'+'/'+'www.google.it')">
+                <div id="card2" class="card" onclick="redirect('../'+'Sito'+'/'+'CorsoSito.html')">
                     <div class="hero-image-card" style="background-image: url(../../public/img/macchinaFotografica.jpg);"></div>
                     <div class="container">
                         <h1 class="card-font">Corso</h1>
@@ -57,10 +62,11 @@
                 </div>
 
                 <!-- Card 3 -->
-                 <div id="card3" class="card" onclick="redirect('https:/'+'/'+'www.google.it')">
+                <!-- Deve far uscire il popup, non c'è una pagina di registrazione -->
+                 <div id="card3" class="card" onclick="return checkSessionCookie()">
                     <div class="hero-image-card" style="background-image: url(../../public/img/macchinaFotografica2.jpg);"></div>
                     <div class="container">
-                        <h1 class="card-font">Registrati</h1>
+                        <h1 class="card-font">Registrati</h1> 
                         <p>
                             Registrati per poter utilizzare funzionalità premium
                             come il Tool di modifica delle foto!
