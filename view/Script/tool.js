@@ -1,0 +1,1 @@
+/* Include tutte le funzioni che servono alla pagina tool */
