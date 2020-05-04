@@ -106,7 +106,7 @@
 }
 
 .login{
-    padding: 125px 25px;
+    padding: 100px 25px;
     background: white;
     border-radius: 10px;
     border-top: 3px solid black;
@@ -196,7 +196,7 @@
 
 .footer{
     position: relative;
-    height: 40px;
+    height: 30px;
     width: 100%;
 }
 .footer_re{
@@ -382,14 +382,21 @@ setTimeout(carousel, 2000); // Change image every 2 seconds
                 <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
             </div>
             <div class="body">
-                <form action="#" class="form">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
+                <form action="../Shared/login.php" method="POST"  class="form">
+                    <input name="email" type="email" placeholder="Email">
+                    <input name="password" type="password" placeholder="Password">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="ricordami" id="idricordami">
+                        <label class="form-check-label" for="idricordami">Remember me</label>
+                      </div>
+
+                    <div class="footer">
+                        <button type="submit" name="bottoneLogin">Login</button>
+                    </div>
+                   
                 </form>
             </div>
-            <div class="footer">
-                <button>Login</button>
-            </div>
+            
         </div>
                 </th>
                 <th>
@@ -399,18 +406,19 @@ setTimeout(carousel, 2000); // Change image every 2 seconds
                         </div>
                         
                         <div class="body_re">
-                            <form action="#" class="form_re">
+                            <form action="../Shared/registrazione.php" method="POST" class="form_re">
                                 <center>
-                                <input type="text" placeholder="Nome">
-                                <input type="text" placeholder="Cognome">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
+                                <input name="nome" type="text" placeholder="Nome">
+                                <input name="cognome" type="text" placeholder="Cognome">
+                                <input name="email" type="email" placeholder="Email">
+                                <input name="password" type="password" placeholder="Password">
                                 </center>
+                                <div class="footer_re">
+                                    <button type="submit" name="bottoneRegistrazione"> Registrazione</button>
+                                </div>
                             </form>
                         </div>
-                        <div class="footer_re">
-                            <button name="bottoneRegistrazione"> Registrazione</button>
-                        </div>
+                        
                     </div>
     
                 </th>
