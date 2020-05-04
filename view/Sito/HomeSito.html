@@ -19,6 +19,7 @@
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/bootstrap.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--script animate css-->
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/viewportchecker.js"></script>
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/custom.js"></script>
         
@@ -47,21 +48,13 @@
                 
           
              /*su d g si*/
-             .row{
-                padding:0 16px;
-
-             }
-             .column{
-                 
-                height: 360px;
-                
-             }
-
+             
+            
              .nosito{
                  font-size: 25px;
                  transition: all 0.3s;
              }
-             .nosito:hover {
+             .nosito:hover, .home:hover {
                  text-shadow: 0px 0px 4px  rgb(245, 225, 200);
                  font-weight: bold;
                  
@@ -69,55 +62,21 @@
              }
              
              /*show gallery*/
+     .mySlides {
+    display:none;
+    width: auto;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+}
              
-             .slider{
-
-                width: auto;
-                height: 600px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                background: url(../../utility/Img/im1.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                animation: slide 10s infinite;
-                text-align: center;
-             }
-
-            /*script per slideshow*/
-            @keyframes slide{
-               
-               
-               25% {
-                    background: url(../../utility/Img/im2.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-               
-               50% {
-                    background: url(../../utility/Img/im3.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-             
-                75%{
-                    background: url(../../utility/Img/im4.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-               
-               100% {
-                    background: url(../../utility/Img/im1.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-            }
            
             /*popup*/
     .overlay{
@@ -343,7 +302,7 @@
         <ul class="navbar-nav">
            
             <li class="nav-item">
-            <a href="HomeSito.html" style="margin-right:30px; font-size: 32px;  font-family: 'Poiret One', cursive; color: white; font-weight: bold;"> <u>HOME</u> </a>
+            <a class="home" href="HomeSito.html" style="margin-right:30px; font-size: 32px;  font-family: 'Poiret One', cursive; color: white; font-weight: bold;"> <u>HOME</u> </a>
            </li>
 
            
@@ -381,15 +340,38 @@
    
 
    <!--Slideshow automati-->
-   <div class="container">
-        <div class="slider"> </div>
-    </div>
+   <div class="slider">
+    <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%" >
+    <img class="mySlides" src="../../utility/Img/slide3.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide4.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide5.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide6.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
+    <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
+</div>
+
+<script>
+    var myIndex = 0;
+carousel();
+
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "block";  
+setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
    
 
     <!--
-        -"Dialog" usata per creare una finestra che appare sopra il contenuto della pagina
-        - "Modal" classe bootstrap che permette la creazione della finestra dialog
-        - "Modal fade" permette di nascondere la finestra prima che viene richiesta
+      popup
     -->
     <div class="overlay">
         <table class="tabpop" cellspacing=”0″ cellpadding=”0″>
