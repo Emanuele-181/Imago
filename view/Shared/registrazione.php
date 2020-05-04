@@ -5,7 +5,7 @@
     <body>
         <?php
 
-            $db = pg_connect("host=localhost port=5432 dbname=Imago_test user=postgres password=manuvb")
+            $db = pg_connect("host=localhost port=5432 dbname=Imago_test user=postgres password=...")
             or die('Errore! Impossibile connettersi al DB: ' . pg_last_error());
 
             /* Reindirizzamento alla pagina principale se la pagina
