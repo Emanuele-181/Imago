@@ -40,6 +40,16 @@
             html, body{
                 min-height: 100%;
             }
+
+            @media(min-width: 3200px){
+                test{
+                    transform: scale(0.5,0.5);
+                    
+                }
+            }
+
+
+
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
                 background-image: linear-gradient( rgba(49, 48, 40, 0.226),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
@@ -88,22 +98,17 @@
             }
              
            /*script polaroid*/
-           .fotopop{
-                position: absolute;
-                padding: 0 0 0 1200px;
-                top: 1000px;
+         
+            .fotopop.open{
+                display:flex;
+                animation: show-fotopop 0.5s;
+            }
+            .fotopop{
                 display: none;
             }
-            .fotopop i{
-                position: absolute;
-                bottom: 600px;
-                right: 180px;
-                font-size: 20px;
-                color: black;
-            }
-            .fotopop.open{
-                display: flex;
-                animation: show-fotopop 0.5s;
+            #fotopop_x {
+               font-size: 20px;
+               color: black;
             }
 
             @keyframes show-fotopop{
@@ -132,6 +137,8 @@
         </script>
         
         <div id="barra"> </div>
+
+        <div class="test">
    
         <!--Slideshow automati-->
         <div class="slider">
@@ -164,38 +171,37 @@
             }
         </script>
         
-        <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; margin-top: 600px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
-        <p style="color:black; font-size:50px; margin-left: 200px; font-weight: bold;">Roland Barthes</p>
-    
         <table>
+
+            <tr>
+                <p class="testo" style=" text-align: center; margin-top:600px; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
+            </tr>
+
+            <tr>
+                <p style="color:black; font-size:50px;font-weight: bold;">Roland Barthes</p>
+            </tr>
+
             <tr>
                 <th>
                     <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(228, 66, 66);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
                 </th>
-
+                
                 <th>
-                    <div>
-                        <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">   
-                    </div>
+                    <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">  
                 </th>
-            </tr> 
+                
+                <th class="fotopop">
+                    <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
+                    <img src="../../utility/Img/foto.jpg" >
+                </th>
+               
+            
+            </tr>
+
         </table>
 
-        <div class="fotopop">
-            <table>
-                <th>
-                    <tr>
-                    <img src="../../utility/Img/foto.jpg" > 
-                     </tr>
-                    
-                     <tr>
-                         <i class="fas fa-times"  style="cursor: pointer;"onclick="fpolaroid()"></i>
-                    </tr>
-
-                </th>
-            </table>
-        </div>
-   
+       
+    </div>
     
 </body>
 </html>
