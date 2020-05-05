@@ -37,18 +37,12 @@
             /*font citazione*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
             /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-           @media(max-width: 1400px){
-                .test{
-                    transform: scale(0.3, 0.4); 
+           @media(max-width: 1900px){
+                .larghezza_150{
+                    transform: scale(0.65, 0.65); 
                 }
-                .slider{
-                    height: 400px;
-                }
-                .test_slide{
-                    height: 40%;
-                }
-                
-                
+               
+      
            }
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
@@ -138,7 +132,7 @@
    
        
         <!--Slideshow automati-->
-      <div class="test_slide">
+        
         <div class="slider">
             <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%">
@@ -149,7 +143,7 @@
             <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
         </div>
-    </div>
+       
 
         <script>
             var myIndex = 0;
@@ -169,38 +163,34 @@
                 setTimeout(carousel, 2000); // Change image every 2 seconds
             }
         </script>
+        
+        
+        <div class="larghezza_150">
+            <table>
+                <tr>
+                    <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
+                </tr>
 
-       <div class="test">
-      
-       <table>
-            <tr>
-                <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
-            </tr>
+                <tr>
+                    <p style="color:black; font-size:50px;font-weight: bold;">Roland Barthes</p>
+                </tr>
 
-            <tr>
-                <p style="color:black; font-size:50px;font-weight: bold;">Roland Barthes</p>
-            </tr>
-
-            <tr>
-                <th>
-                    <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(228, 66, 66);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
-                </th>
+                <tr>
+                    <th>
+                        <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(228, 66, 66);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
+                    </th>
                 
-                <th>
-                    <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">  
-                </th>
+                    <th>
+                        <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">  
+                    </th>
                 
-                <th class="fotopop">
-                    <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
-                    <img src="../../utility/Img/foto.jpg" >
-                </th>
-            </tr>
+                    <th class="fotopop">
+                        <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
+                        <img src="../../utility/Img/foto.jpg" >
+                    </th>
+                </tr>
+            </table>
+        </div>
        
-        </table>
-       
-    </div>
-       
-    
-    
 </body>
 </html>
