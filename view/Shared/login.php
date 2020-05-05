@@ -17,7 +17,7 @@
             else{
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-                $ricordami = $_POST['ricordami'];
+                $ricordami = isset($_POST['ricordami'])?$_POST['ricordami']:'';
                 $q_check = "SELECT * FROM utente WHERE email=$1 AND password=$2";
                 $result = pg_query_params($db, $q_check, array($email, $password));
                 if($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
