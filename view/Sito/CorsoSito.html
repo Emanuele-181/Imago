@@ -26,7 +26,7 @@
         
         <style type="text/css">
 
-            
+            @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');            
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
                 background-image: linear-gradient( rgba(66, 65, 54, 0.075),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
@@ -100,7 +100,41 @@
                 height: 100vh;
                 background-color: rgba(173,228,240);
             }
+
+            .container{
+                padding: 450px 0 0 0;
+            }
+
+            
+             
+            .bottoni button{
+                border-radius: 30px;
+                font-size: 40px; 
+                margin-right: 200px;
+                margin-bottom: 200px;
+                font-family: 'Poiret One', cursive;
+                text-align: center;
+                background-color:rgb(48, 49, 58);
+                color: white;
+                height: 70px;
+                border: none
+                
+                
+            }
+
+            .bottoni button:hover{
+                background-color: rgba(255, 226, 61, 0.808);
+                border: none;
+                font-weight: bold;
+            }
+            
+            
+            .presentazione{
+                font-family: 'Julius Sans One', sans-serif;
+                font-size: 30px;
                
+            }
+
     </style>
     </head>
 
@@ -120,19 +154,62 @@
         </div>
 
 
-        <table>
-            <tr>
-                <th>
-                    <button>TEMPO</button>
-                </th>
-                <th>
-                    <button>ISO</button>
-                </th>
-                <th>
-                    <button>DIAFRAMMA</button>
-                </th>
-            </tr>
-        </table>
+        <div class="container">
+            <div class="presentazione">
+                La fotografia è una delle tue più grandi <b style=" font-weight: bold;
+                color: black;">passioni</b>? <br> 
+                Vorresti alimentare la tua conoscenza riguardo a questo <b style=" font-weight: bold;
+                color: black;">fantastico mondo</b>? <br> 
+                Se hai risposto in modo affermativo a queste domande, devi assolutamente consultare questo breve ma esaustivo corso.<br> 
+                Nei seguent moduli avrai l'opportunità di scoprire e apprendere in maniera accurata alcuni dei più importanti strumenti per effettuare foto professionali: 
+                <b style="font-weight: bold;"> <u>il tempo di scatto</u>, <u>l'ISO</u> e <u> il diaframma.</u> </b><br>
+                <br>
+                <b style=" font-weight: bold; color: black;">
+                Dopo aver appreso questi concetti fondamentali, non ti resta che mettere in atto le tue nuove abilità con il nostro TOOL!
+                </b>
+            </div>
+            <br><br><br><br>
+            <div class="bottoni">
+                <table>
+                    <center>
+                    <tr>
+                        <th>
+                            <button class="btn">MODULO1</button>
+                        </th>
+                        <th>
+                            <button class="btn">MODULO2</button>
+                        </th>
+                        <th>
+                            <button class="btn">MODULO3</button>
+                        </th>
+                    </tr>
+                    </center>
+                </table>
+            </div>
+
+            <div id="zona-dinamica" style="">
+            
+                    <script>
+                    var documenti = document.getElementsByTagName("button");
+                    for (var i = 0; i < documenti.length; i++) {
+                    documenti[i].onclick = caricaDocumento;
+                    }
+                    function caricaDocumento(e) {
+                    var httpRequest = new XMLHttpRequest();
+                    httpRequest.onreadystatechange = gestisciResponse;
+                    httpRequest.open("GET", e.target.innerHTML + ".html", true);
+                    httpRequest.send();
+                    }
+                    function gestisciResponse(e) {
+                    if (e.target.readyState == XMLHttpRequest.DONE && e.target.status == 200) {
+                    document.getElementById("zona-dinamica").innerHTML = e.target.responseText;
+                    }
+                    }
+                    </script>
+                    
+
+            </div>
+        </div>
         
     </body>
 </html>
