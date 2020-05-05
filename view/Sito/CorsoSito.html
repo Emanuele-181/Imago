@@ -26,10 +26,7 @@
         
         <style type="text/css">
 
-            html, body{
-                min-height: 100%;
-            }
-        
+            
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
                 background-image: linear-gradient( rgba(66, 65, 54, 0.075),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
@@ -98,9 +95,10 @@
             } 
 
             .view{
-                background: url("../../utility/Img/sfondo_corso.jpg")no-repeat center center;
+                background: url("../../utility/Img/sfondo_corso.png")repeat-x center center ;
                 width: 100vw;
                 height: 100vh;
+                background-color: rgba(173,228,240);
             }
                
     </style>
@@ -116,9 +114,25 @@
         </script>
         <div id="barra"> </div>
 
-            <div class="view intro hm-purple-light" style="height: 370px;width: 100%; position: absolute;top:0px;">
-                <h1 class="classeTesto"align="right" style="color:rgb(8, 136, 255);font-family: 'Spartan', sans-serif; ">CORSO</h1>
-            </div>
+        <!-- SCRITTA CORSO-->
+        <div class="view intro hm-purple-light" style="height: 370px;width: 100%; position: absolute;top:0px;">
+            <h1 class="classeTesto"align="right" style="color:rgb(8, 136, 255);font-family: 'Spartan', sans-serif; ">CORSO</h1>
+        </div>
+
+
+        <table>
+            <tr>
+                <th>
+                    <button>TEMPO</button>
+                </th>
+                <th>
+                    <button>ISO</button>
+                </th>
+                <th>
+                    <button>DIAFRAMMA</button>
+                </th>
+            </tr>
+        </table>
         
     </body>
 </html>
