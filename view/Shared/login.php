@@ -5,7 +5,7 @@
     <body>
         <?php
 
-            $db = pg_connect("host=localhost port=5432 dbname=Imago_test user=postgres password=manuvb")
+            $db = pg_connect("host=localhost port=5432 dbname=Imago_test user=postgres password=password")
             or die('Errore! Impossibile connettersi al DB: ' . pg_last_error());
 
             /* Reindirizzamento alla pagina principale se la pagina
@@ -17,7 +17,7 @@
             else{
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-                $ricordami = $_POST['ricordami'];
+                $ricordami = isset($_POST['ricordami'])?$_POST['ricordami']:'';
                 $q_check = "SELECT * FROM utente WHERE email=$1 AND password=$2";
                 $result = pg_query_params($db, $q_check, array($email, $password));
                 if($line = pg_fetch_array($result, null, PGSQL_ASSOC)){

@@ -1,433 +1,124 @@
 
 <html>
     <head>
+
+        <meta charset="utf-8"/>
+        <title>Corso</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+       
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        
         <script type="text/javascript" lang="javascript" src="../css/bootstrap.min.css"></script>
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
-        <title>Corso</title>
+       
         <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-        <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptHome.js"></script>
-
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        
+       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         
         <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         
+        <!--Script per navbar e-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        
         
         <style type="text/css">
 
-
-        html, body{
+            html, body{
                 min-height: 100%;
             }
-            .sfondo{
-                
-                background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));
-               
-            }
-            .nosito{
-                 font-size: 25px;
-                 transition: all 0.3s;
-             }
-             .nosito:hover, .home:hover, .sito:hover {
-                 text-shadow: 0px 0px 4px  rgb(245, 225, 200);
-                 font-weight: bold;
-                 
-                
-             }
-
-        /*font navbar*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-                        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-                        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
         
-        @media (max-width: 640px) { 
-.classeTesto {font-size:4rem; padding:60% 0 0 0} 
-} 
-
-@media (min-width: 641px) { 
-.classeTesto {font-size:5.1rem;padding: 28% 0 0 0;}
-
-} 
-
-@media (min-width:960px) { 
-.classeTesto {font-size:6rem;padding:22% 0 0 0}  
-} 
-
-@media (min-width:1100px) { 
-.classeTesto {font-size:8rem;padding:13% 0 0 0}
-} 
-@media (min-width:1900px) { 
-.classeTesto {font-size:9rem;padding:9% 0 0 0}
-} 
-
-
-@media (min-width:2000px) { 
-.classeTesto {font-size:10rem;padding:9% 0 0 0}
-} 
-
-@media (min-width:2200px) { 
-.classeTesto {font-size:10rem;padding:7% 0 0 0}
-} 
-
-@media (min-width:2500px) { 
-.classeTesto {font-size:13rem;padding:4% 12% 0 0}
-} 
-@media (min-width:3200px) { 
-.classeTesto {font-size:14rem;padding:2% 24% 0 0}
-} 
-
-@media (min-width:4700px) { 
-.classeTesto {font-size:15rem;padding:2% 30.5% 0 0}
-} 
-
-@media (min-width:6000px) { 
-.classeTesto {font-size:15rem;padding:1% 35% 0 0}
-} 
-
-
-            
-            .view {
-                background: url("../../utility/Img/sfondo_corso.jpg")no-repeat center center;
-                
-                 width: 100vw;
-                 height: 100vh;
-                 }
-               
-      
-             /*show gallery*/
-             
-             .slider{
-
-                width: auto;
-                height: 600px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                background: url(../../utility/Img/im1.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                animation: slide 10s infinite;
-                text-align: center;
-             }
-
-            /*script per slideshow*/
-            @keyframes slide{
-               
-               
-               25% {
-                    background: url(../../utility/Img/im2.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-               
-               50% {
-                    background: url(../../utility/Img/im3.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-             
-                75%{
-                    background: url(../../utility/Img/im4.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
-               
-               100% {
-                    background: url(../../utility/Img/im1.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    text-align: center;
-                }
+            .sfondo{
+                /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
+                background-image: linear-gradient( rgba(66, 65, 54, 0.075),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
             }
-           
-            /*popup*/
-    .overlay{
-    position: fixed;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    z-index: 100;
-   
-}
+        
+            /*navbar*/
+            #idhome{
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #corso{
+                text-decoration: underline;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            #tool{
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #storia{
+                text-decoration: none;
+                cursor: pointer;
+            }   
+            #tutorial{
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #chisiamo{
+                text-decoration: none;
+                cursor: pointer;
+            }
+        
+            /*centrare immagine sfondo*/
+            @media (max-width: 640px) { 
+                .classeTesto {font-size:4rem; padding:60% 0 0 0} 
+            } 
+            @media (min-width: 641px) { 
+                .classeTesto {font-size:5.1rem;padding: 28% 0 0 0;}
+            }    
+            @media (min-width:960px) { 
+                .classeTesto {font-size:6rem;padding:22% 0 0 0}  
+            } 
+            @media (min-width:1100px) { 
+                .classeTesto {font-size:8rem;padding:13% 0 0 0}
+            } 
+            @media (min-width:1900px) { 
+                .classeTesto {font-size:9rem;padding:9% 0 0 0}
+            } 
+            @media (min-width:2000px) { 
+                .classeTesto {font-size:10rem;padding:9% 0 0 0}
+            }    
+            @media (min-width:2200px) { 
+                .classeTesto {font-size:10rem;padding:7% 0 0 0}
+            } 
+            @media (min-width:2500px) { 
+                .classeTesto {font-size:13rem;padding:4% 12% 0 0}
+            } 
+            @media (min-width:3200px) { 
+                .classeTesto {font-size:14rem;padding:2% 24% 0 0}
+            } 
+            @media (min-width:4700px) { 
+                .classeTesto {font-size:15rem;padding:2% 30.5% 0 0}
+            } 
+            @media (min-width:6000px) { 
+                .classeTesto {font-size:15rem;padding:1% 35% 0 0}
+            } 
 
-.overlay.open{
-    display: flex;
-    animation: show-overlay 0.5s;
-}
-
-@keyframes show-overlay{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.login{
-    padding: 125px 25px;
-    background: white;
-    border-radius: 10px;
-    border-top: 3px solid black;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-    border-right: 4px solid black;
-    
-}
-
-.registrazione{
-    padding: 50px 25px;
-    background: rgb(245, 225, 200);
-    border-radius: 10px;
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
-    border-left: 4px solid black;
-
-
-}
-.header{
-    position: relative;
-}
-
-.header_re{
-    position: relative;
-}
-
-.header h1{
-    text-align: center;
-    text-transform: uppercase;
-    color: black;
-    padding-bottom: 7px;
-    border-bottom: 2px solid black;
-}
-
-.header_re h1{
-    text-align: center;
-    text-transform: uppercase;
-    color: black;
-    padding-bottom: 7px;
-    border-bottom: 2px solid black;
-}
-
-.header_re i{
-    position: absolute;
-    bottom: 70px;
-    left: 319px;
-    font-size: 20px;
-    color: black;
-}
-
-.body .form input{
-    display: block;
-    padding: 10px;
-    margin: 25px 10px;
-    font-size: 17px;
-    outline: none;
-    border: solid black 1px;
-    color: black;
-    transition: 0.4s;
-    border-radius: 8px;
-}
-
-.body_re .form_re input{
-    display: block;
-    padding: 10px;
-    margin: 25px 50px;
-    font-size: 18px;
-    outline: none;
-    border: solid black 1px;
-    color: black;
-    transition: 0.4s;
-    border-radius: 8px;
-    
-}
-
-.body .form input:focus{
-    border-color: rgba(224, 127, 36, 0.979);
-    border-width: 1px;
-}
-
-.body_re .form_re input:focus{
-    border-color: rgba(224, 127, 36, 0.979);
-    border-width: 1px;
-}
-
-.footer{
-    position: relative;
-    height: 40px;
-    width: 100%;
-}
-.footer_re{
-    position: relative;
-    height: 40px;
-    width: 100%;
-}
-
-.footer button{
-    position: absolute;
-    padding: 10px;
-    min-width: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    cursor: pointer;
-    transition: 0.4s;
-    border-radius: 8px;
-}
-.footer_re button{
-    position: absolute;
-    padding: 10px;
-    min-width: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    cursor: pointer;
-    transition: 0.4s;
-    border-radius: 8px;
-}
-
-.footer button{
-    background-color: rgb(26, 24, 24);
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Poiret One', cursive;
-}
-.footer_re button{
-    background-color: rgb(26, 24, 24);
-    color: white;
-    text-transform: uppercase;
-     font-family: 'Poiret One', cursive;
-}
-.footer button:hover{
-    background: rgb(219, 219, 219);
-}
-.footer_re button:hover{
-    background: rgb(219, 219, 219);
-}
-            </style>
-           
+            .view{
+                background: url("../../utility/Img/sfondo_corso.jpg")no-repeat center center;
+                width: 100vw;
+                height: 100vh;
+            }
+               
+    </style>
     </head>
 
     <body class="sfondo">
-          <!--Creo la navbar-->
-      <nav class="navbar navbar-expand-md" style="z-index: 1;">
-        <!--Creo il buttone mobile-->
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--Rende la navbar stabile-->
-        <div class="collapse navbar-collapse" id="collapse_target">
-        <!--Creo il logo-->
-        <a class="navbar-brand" href=""> <img=""></a>
-        <!--Creo i link a sinistra-->
-        <ul class="navbar-nav">
-           
-            <li class="nav-item">
-            <a class="home" href="HomeSito.html" style="margin-right:30px; font-size: 32px;  font-family: 'Poiret One', cursive; color: white;  text-decoration: none;"> HOME </a>
-           </li>
+          
+        <!--Navbar-->
+        <script> 
+            $(document).ready(function() {
+                $( "#barra" ).load( "../Shared/NavbarPoppup.html" );   
+            });
+        </script>
+        <div id="barra"> </div>
 
-           
-           <li class="nav-item">
-            <a class="sito" href="CorsoSito.html"style="margin-right:30px;  font-size: 32px; font-family: 'Poiret One', cursive; color: white; font-weight: bold;"> <u>CORSO</u> </a>
-           </li>
-
-           <li class="nav-item">
-            <a  class="nosito" href="ToolSito.html" style=" margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TOOL </a>
-           </li>
-
-           <li class="nav-item">
-            <a  class="nosito" href="StoriaSito.html" style="margin-right:30px;   font-family: 'Poiret One', cursive; color: white; text-decoration: none;">STORIA</a>
-           </li>
-            
-           <li class="nav-item">
-            <a class="nosito" href="TutorialSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">TUTORIAL</a>
-           </li>
-   
-            <li class="nav-item">
-             <a class="nosito" href="ChiSiamoSito.html" style="margin-right:30px;  font-family: 'Poiret One', cursive; color: white; text-decoration: none;">CHI SIAMO</a>
-            </li>
-           
-        
-        </ul>
-   </div>
-   <!--Creo i link a destra-->
-   <div class="nav-item" onclick="toggleLogin()" >
-        <a> <i class="btn fas fa-users nav-link" style="font-size:60px; color:white;">  </i></a>
-   </div>
-
-   </nav>
-
-   <!--
-        -"Dialog" usata per creare una finestra che appare sopra il contenuto della pagina
-        - "Modal" classe bootstrap che permette la creazione della finestra dialog
-        - "Modal fade" permette di nascondere la finestra prima che viene richiesta
-    -->
-    <div class="overlay">
-        <table class="tabpop" cellspacing=”0″ cellpadding=”0″>
-            <tr>
-                <th>
-        <div class="login">
-            <div class="header">
-                <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
+            <div class="view intro hm-purple-light" style="height: 370px;width: 100%; position: absolute;top:0px;">
+                <h1 class="classeTesto"align="right" style="color:rgb(8, 136, 255);font-family: 'Spartan', sans-serif; ">CORSO</h1>
             </div>
-            <div class="body">
-                <form action="#" class="form">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                </form>
-            </div>
-            <div class="footer">
-                <button>Login</button>
-            </div>
-        </div>
-                </th>
-                <th>
-                    <div class="registrazione">
-                        <div class="header_re">
-                            <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Registrazione</h1> <i class="fas fa-times"  style="cursor: pointer;"onclick="toggleLogin()"></i>
-                        </div>
-                        
-                        <div class="body_re">
-                            <form action="#" class="form_re">
-                                <center>
-                                <input type="text" placeholder="Nome">
-                                <input type="text" placeholder="Cognome">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
-                                </center>
-                            </form>
-                        </div>
-                        <div class="footer_re">
-                            <button> Registrazione</button>
-                        </div>
-                    </div>
-    
-                </th>
-            </tr>
-        </table>
-    </div>
-        <div class="view intro hm-purple-light" style="height: 370px;width: 100%; position: absolute;top:0px;">
-            <h1 class="classeTesto"align="right" style="color:rgb(8, 45, 255);font-family: 'Spartan', sans-serif; ">CORSO</h1></div>
-        
-        
-            
-    
         
     </body>
 </html>
