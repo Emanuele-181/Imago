@@ -37,19 +37,17 @@
             /*font citazione*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
             /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-            html, body{
-                min-height: 100%;
-            }
-
-            @media(min-width: 3200px){
-                test{
-                    transform: scale(0.5,0.5);
-                    
+           @media(max-width: 1400px){
+                .test{
+                    transform: scale(0.6, 0.6); 
                 }
-            }
-
-
-
+                .slider{
+                    height: 400px;
+                }
+                .test_slide{
+                    height: 40%;
+                }
+           }
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
                 background-image: linear-gradient( rgba(49, 48, 40, 0.226),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
@@ -87,10 +85,6 @@
                 display:none;
                 width: auto;
                 height: 600px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -138,12 +132,14 @@
         
         <div id="barra"> </div>
 
-        <div class="test">
+    
    
+       
         <!--Slideshow automati-->
+      <div class="test_slide">
         <div class="slider">
             <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%" >
+            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide3.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide4.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide5.jpg" style="width:100%">
@@ -151,6 +147,7 @@
             <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
         </div>
+    </div>
 
         <script>
             var myIndex = 0;
@@ -170,11 +167,12 @@
                 setTimeout(carousel, 2000); // Change image every 2 seconds
             }
         </script>
-        
-        <table>
 
+       <div class="test">
+      
+       <table>
             <tr>
-                <p class="testo" style=" text-align: center; margin-top:600px; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
+                <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
             </tr>
 
             <tr>
@@ -194,14 +192,13 @@
                     <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
                     <img src="../../utility/Img/foto.jpg" >
                 </th>
-               
-            
             </tr>
-
+       
         </table>
-
        
     </div>
+       
+    
     
 </body>
 </html>

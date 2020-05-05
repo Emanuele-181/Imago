@@ -208,8 +208,10 @@
     
 </head>
 <body>
+        
+
         <!--Creo la navbar-->
-        <nav class="navbar navbar-expand-md" style="z-index: 1;">
+        <nav class="navbar navbar-expand-md" style="z-index: 1; position: absolute; top: 0;">
             
             <!--Creo il buttone mobile-->
             <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -236,11 +238,12 @@
     
             </div>
             <!--Creo i link a destra-->
-            <div class="nav-item" onclick="toggleLogin()" >
-                <a> <i class="icona_utente fas fa-users" style="font-size:60px; color:white; cursor: pointer;">  </i></a>
-            </div>
 
         </nav>
+
+        <div class="nav-item" onclick="toggleLogin()" >
+            <a> <i class="icona_utente fas fa-users" style="font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right: 2%;">  </i></a>
+        </div>
 
         <!--popup-->
         <div class="overlay">
