@@ -10,7 +10,7 @@
 /* Controlla se un utente è loggato */
 function checkLogin(){
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
-        alert('Occhio chicco che non stai loggato');
+        alert('Per accedere a questa pagina devi registrarti o fare il login.');
         if(window.history.length == 1){
             window.location.replace('../Sito/HomeSito.html');
         }
