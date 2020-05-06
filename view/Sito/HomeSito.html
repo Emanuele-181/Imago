@@ -37,19 +37,13 @@
             /*font citazione*/ @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
             /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
-            html, body{
-                min-height: 100%;
-            }
-
-            @media(min-width: 3200px){
-                test{
-                    transform: scale(0.5,0.5);
-                    
+           @media(max-width: 1900px){
+                .larghezza_150{
+                    transform: scale(0.65, 0.65); 
                 }
-            }
-
-
-
+               
+      
+           }
             .sfondo{
                 /*background-image: linear-gradient( rgba(255, 250, 205, 0.459), rgba(255, 250, 205, 0.459), rgba(241, 227, 95, 0.459));*/
                 background-image: linear-gradient( rgba(49, 48, 40, 0.226),rgba(8, 8, 4, 0.308),rgb(4, 6, 22));
@@ -87,10 +81,6 @@
                 display:none;
                 width: auto;
                 height: 600px;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -138,12 +128,14 @@
         
         <div id="barra"> </div>
 
-        <div class="test">
+    
    
+       
         <!--Slideshow automati-->
+        
         <div class="slider">
             <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%" >
+            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide3.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide4.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide5.jpg" style="width:100%">
@@ -151,6 +143,7 @@
             <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
             <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
         </div>
+       
 
         <script>
             var myIndex = 0;
@@ -171,37 +164,31 @@
             }
         </script>
         
-        <table>
-
-            <tr>
-                <p class="testo" style=" text-align: center; margin-top:600px; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
-            </tr>
-
-            <tr>
-                <p style="color:black; font-size:50px;font-weight: bold;">Roland Barthes</p>
-            </tr>
-
-            <tr>
-                <th>
-                    <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(228, 66, 66);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
-                </th>
-                
-                <th>
-                    <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">  
-                </th>
-                
-                <th class="fotopop">
-                    <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
-                    <img src="../../utility/Img/foto.jpg" >
-                </th>
-               
-            
-            </tr>
-
-        </table>
-
-       
-    </div>
+        
+        <div class="larghezza_150">
+            <table>
     
+                <tr>
+                    <p class="testo" style=" text-align: center; font-family: 'Poiret One', cursive; color:black; font-size:50px; font-weight: bold;" >“Ciò che la fotografia riproduce all’infinito ha avuto luogo solo una volta: <br> essa ripete meccanicamente ciò che non potrà mai ripetersi esistenzialmente.”</p>
+                    <p style="color:black; font-size:50px;font-weight: bold; text-align: center;">Roland Barthes</p>
+                </tr>
+
+                <tr>
+                    <th>
+                        <p style="font-family: 'Rock Salt', cursive; font-size: 40px;float: right; color: rgb(255, 255, 255);" align="center" >Clicca la fotocamera <br>per sapere che cos'è <br> IMAGO!</p>
+                    </th>
+                
+                    <th>
+                        <img class="flash" src="../../utility/Img/polaroid.jpg" style="cursor: pointer;" onclick="fpolaroid()">  
+                    </th>
+                
+                    <th class="fotopop">
+                        <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
+                        <img src="../../utility/Img/foto.jpg" >
+                    </th>
+                </tr>
+            </table>
+        </div>
+       
 </body>
 </html>
