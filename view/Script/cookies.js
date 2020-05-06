@@ -10,7 +10,13 @@
 /* Controlla se un utente è loggato */
 function checkLogin(){
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
-        alert('Occhio chicco che non stai loggato')
+        alert('Occhio chicco che non stai loggato');
+        if(window.history.length == 1){
+            window.location.replace('../Sito/HomeSito.html');
+        }
+        else{
+            window.history.back()
+        }
         return false;
     }
     return true;
