@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    
+  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+
+        .bottonim2 button{
+                border-radius: 20px;
+                font-size: 15px; 
+                margin-bottom: 50px;
+                font-family: 'Poiret One', cursive;
+                text-align: center;
+                background-color:rgb(48, 49, 58);
+                color: white;
+                border: none
+                
+                
+            }
+
+            .bottonim2 button:hover{
+                background-color: rgb(8, 136, 255);
+                border: none;
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+
+    <p style="font-family: 'Julius Sans One', sans-serif; font-size: 30px;">
+     <table>
+         <tr>
+             <th>
+                <b style="font-size: 45px; color: red; font-weight: bold;">MODULO2: L'ISO</b> 
+             </th>
+             <th>
+                <i class="fas fa-lightbulb" style="font-size: 50px;"></i>
+             </th>
+         </tr>
+     </table> <br><br>
+    <b style="color: black; font-weight: bold; font-size: 35px;">La sensibilità ISO</b> indica la quantità di luce che una pellicola 
+    (o il sensore per il digitale) è in grado di assorbire in un certo tempo.<br>
+     Quindi si regola generalmente in base alla situazione luminosa esterna.<br>
+
+     Il minimo valore di ISO possibile al giorno d’oggi è 50 e la scala dell’ISO è la seguente: 
+     50 100 200 400 800 1600 3200 6400 12800.<br><br> 
+
+     <u style="font-weight: bold; color: black;">ISO nelle digitali e ASA nelle pellicole</u><br>
+     Forse per capire cosa sono i valori ISO nelle macchine digitali,<br>
+     la cosa più semplice è capire il funzionamento di questi valori sulle pellicole che venivano utilizzate da tutti fino a qualche anno fa.<br>
+     In pratica ogni pellicola ha un valore di sensibilità,<br>
+     e una pellicola con sensibilità 100 ha bisogno del doppio di luce di una pellicola con sensibilità 200;<br>
+     quindi una pellicola con sensibilità 400 richiede un quarto della luce rispetto ad una pellicola con sensibilità 100.<br>
+     Più nelle pellicole si aumenta la sensibilità e più aumenta la grana nella stampa.<br>
+     <b style="color: rgb(194, 182, 182);">Parallelamente la stessa cosa avviene nel digitale,<br>
+     a differenza che se una volta bisognava finire un rullino prima di caricarne un altro, ora si possono cambiare i valori ISO per ogni fotografia.</b> <br><br><br>
+
+
+     <b style="color: rgb(170, 166, 166);">è importante sottolineare che aumentare la sensibilità ISO può comportare una serie di effetti collaterali che danneggiano 
+     la qualità finale dell’immagine ottenuta: il rumore digitale, che viene esaminato in post-produzione.</b><br>
+    </p>
+     
+
+   
+      
+    <table class="bottonim2" style="min-height:100px;">
+        <tr>
+            <th>
+                <button class="btn" onclick="caricaImg('../../utility/Img/immagine1lento.jpg', '#apparizione');">Immagine1Lento</button>
+
+            </th>
+            <th>
+                <button class="btn" style="margin-right: 200px; margin-left: 10px;">Immagine1Veloce</button>
+            </th>
+        
+           <th>
+                <button class="btn">Immagine2Lento</button>
+           </th>
+           <th>
+                <button class="btn" style="margin-right: 200px; margin-left: 10px;">Immagine2Veloce</button>
+           </th>
+
+           <th>
+                <button class="btn">Immagine3Lento</button>
+           </th>
+           <th>
+                <button class="btn" style=" margin-left: 10px;" onclick="caricaImg('../../utility/Img/immagine3veloce.jpg', '#apparizione');">Immagine3Veloce</button>
+           </th>
+        </tr>
+    </table>
+    
+    <center>
+        <div id="apparizione" style="margin-bottom: 50px;"></div>
+    </center>
+        
+       
+    
+
+    
+
+</body>
+</html>
