@@ -31,7 +31,11 @@
                 /* Questa parte di codice può essere cambiata per provare a caricare 
                  * l'immagine direttamente nella pagina html*/
                 if (move_uploaded_file($_FILES["inputImg"]["tmp_name"], $nome_file_dst)) {
-                    echo "L'immagine è stata caricata correttamente";
+                    echo "<script>
+                            $('#Img').load(function(){
+                                $image.attr('src'," . $nome_file_dst . ");
+                            });
+                        </script>";
                 }
                 else {
                     echo "Il file non può essere caricato, ci scusiamo per il disagio";
