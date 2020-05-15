@@ -220,16 +220,23 @@
                     <th>
                         <center>
                             <br>
-                            <div id="formCarica" style="font-family:raleway; font-size: 2vh;">
-                                <form action="../Shared/caricaImmagine.php" method ="POST" enctype="multipart/form-data" onsubmit="blocca()" style="background-color: rgba(202, 142, 142, 0.507); border-radius: 100px;;" >
+                            <div style="background-color: rgba(202, 142, 142, 0.507); border-radius: 100px;;">
+
+                            
+                            <div id="formCarica" style="font-family:raleway; font-size: 2vh;color: rgb(36, 32, 32);">
+                                <form action="../Shared/caricaImmagine.php" method ="POST" enctype="multipart/form-data" onsubmit="blocca()"  >
                                 <br>
-                                    <input  type="file" id="inputImg" name="inputImg" style="color: rgb(59, 59, 59);">
-                                <br>
+                                    <input  type="file" id="inputImg" name="inputImg" style="color: rgb(71, 68, 68);padding-left: 15vw">
+                                    <br><br>
                                 <input id="btnCarica" type="submit" value="Carica" name="submit">
                                     <br>
-                                    <br>
+                                    
                                 </form>
                             </div>
+                            <button onclick="visualizzaImg()" style="font-family:raleway; font-size: 2vh; color: brown;">Visualizza</button>
+                            <br>
+                            <br>
+                        </div>
                         </center>
                     </th>
                 </tr>
