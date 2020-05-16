@@ -248,9 +248,9 @@
                 <tr>
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella1">LUMINOSITÀ</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);" onclick="luminosità('+')"></i>
                         <i class="fas fa-sun" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('+')"></i>
                         
                     </th>
                     
@@ -264,9 +264,9 @@
                      </th>
                      <th style="text-align: center;" class="column2">
                         <p class="categorieTabella1">CONTRASTO</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('+')"></i>
                         <i class="fas fa-adjust" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('-')"></i>
                     </th>
                 </tr>
                 
@@ -276,41 +276,48 @@
             <table align="center" cellpadding="20px">
                 <tr>
                     <th style="text-align: center;" class="column2">
-                        <p class="categorieTabella">CALORE</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
-                        <i class="fas fa-thermometer-half" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <p class="categorieTabella">NEGATIVO</p>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="negativo('+')"></i>
+                        <i class="fas fa-film" style="font-size: 5vw; color:white;"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="negativo('-')"></i>
                     </th>
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SATURAZIONE</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="saturazione('+')"></i>
                         <i class="fas fa-fill" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="saturazione('-')"></i>
                     </th>
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SFUMATURA</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfumatura('+')"></i>
                         <i class="fas fa-cloud" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfumatura('-')"></i>
                     </th>
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">COLORE</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="colore('+')"></i>
                         <i class="fas fa-rainbow" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 3vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 3vh;color: rgb(231, 93, 93);"onclick="colore('-')"></i>
                     </th>
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SFOCATURA</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfocatura('+')"></i>
                         <i class="fas fa-tint" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfocatura('-')"></i>
                     </th>
                     <th style="text-align: center;" class="column2">
-                        <p class="categorieTabella">CONTRASTO</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
-                        <i class="fas fa-adjust" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"></i>
+                        <p class="categorieTabella">SEPPIA</p>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="seppia('+')"></i>
+                        <i class="fas fa-fish" style="font-size: 5vw; color:white;"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="seppia('-')"></i>
                     </th>
+                    <th style="text-align: center;" class="column2">
+                        <p class="categorieTabella">RESET</p>
+                        
+                        <i class="fas fa-undo" style="font-size: 5vw; color:white; " onclick="reset()"></i>
+                        
+                    </th>
+
                     
                 </tr>
             </table>
