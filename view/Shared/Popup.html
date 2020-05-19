@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+          
+        <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       
+       
+        <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
+        <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptNavbarPopup.js"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+            .overlay{
+                position: fixed;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                backdrop-filter: blur(10px);
+                z-index: 500;
+            }
+
+            .overlay.open{
+                display: flex;
+                animation: show-overlay 0.5s;
+            }
+
+            @keyframes show-overlay{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+
+            .login{
+                padding: 125px 25px;
+                background: white;
+                border-radius: 10px;
+                border-top: 3px solid black;
+                border-left: 3px solid black;
+                border-bottom: 3px solid black;
+                border-right: 4px solid black;
+            }
+
+            .registrazione{
+                padding: 50px 25px;
+                background: rgb(245, 225, 200);
+                border-radius: 10px;
+                border-top: 3px solid black;
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
+                border-left: 4px solid black;
+            }
+            
+            .header{
+                position: relative;
+            }
+
+            .header_re{
+                position: relative;
+            }
+
+            .header h1{
+                text-align: center;
+                text-transform: uppercase;
+                color: black;
+                padding-bottom: 7px;
+                border-bottom: 2px solid black;
+            }
+
+            .header_re h1{
+                text-align: center;
+                text-transform: uppercase;
+                color: black;
+                padding-bottom: 7px;
+                border-bottom: 2px solid black;
+            }
+
+            .header_re i{
+                position: absolute;
+                bottom: 70px;
+                left: 319px;
+                font-size: 20px;
+                color: black;
+            }
+
+            .body .form input{
+                display: block;
+                padding: 10px;
+                margin: 25px 10px;
+                font-size: 17px;
+                outline: none;
+                border: solid black 1px;
+                color: black;
+                transition: 0.4s;
+                border-radius: 8px;
+            }
+
+            .body_re .form_re input{
+                display: block;
+                padding: 10px;
+                margin: 25px 50px;
+                font-size: 18px;
+                outline: none;
+                border: solid black 1px;
+                color: black;
+                transition: 0.4s;
+                border-radius: 8px;
+            }
+
+            .body .form input:focus{
+                border-color: rgba(224, 127, 36, 0.979);
+                border-width: 1px;
+            }
+
+            .body_re .form_re input:focus{
+                border-color: rgba(224, 127, 36, 0.979);
+                border-width: 1px;
+            }
+
+            .footer{
+                position: relative;
+                height: 40px;
+                width: 100%;
+            }
+        
+            .footer_re{
+                position: relative;
+                height: 40px;
+                width: 100%;
+            }
+
+            .footer button{
+                position: absolute;
+                padding: 10px;
+                min-width: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;   
+                cursor: pointer;
+                transition: 0.4s;
+                border-radius: 8px;
+            }
+
+            .footer_re button{
+                position: absolute;
+                padding: 10px;
+                min-width: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                cursor: pointer;
+                transition: 0.4s;
+                border-radius: 8px;
+            }
+
+            .footer button{
+                background-color: rgb(26, 24, 24);
+                color: white;
+                text-transform: uppercase;
+                font-family: 'Poiret One', cursive;
+            }
+
+            .footer_re button{
+                background-color: rgb(26, 24, 24);
+                color: white;
+                text-transform: uppercase;
+                font-family: 'Poiret One', cursive;
+            }
+            
+            .footer button:hover{
+                background: rgb(219, 219, 219);
+            }
+
+            .footer_re button:hover{
+                background: rgb(219, 219, 219);
+            }   
+        </style>
+</head>
+<body>
+    <!--popup-->
+   
+    <div class="overlay">
+        <table class="tabpop" cellspacing=”0″ cellpadding=”0″>
+            <tr>
+                <th>
+                    <div class="login">
+                        <div class="header">
+                            <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
+                        </div>
+                        <div class="body">
+                            <form action="#" class="form">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                            </form>
+                        </div>
+                        <div class="footer">
+                            <button>Login</button>
+                        </div>
+                    </div>
+                </th>
+                
+                <th>
+                    <div class="registrazione">
+                        <div class="header_re">
+                            <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Registrazione</h1> <i class="fas fa-times"  style="cursor: pointer;"onclick="toggleLogin2()"></i>
+                        </div>
+                    
+                        <div class="body_re">
+                            <form action="#" class="form_re">
+                                <center>
+                                <input type="text" placeholder="Nome">
+                                <input type="text" placeholder="Cognome">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                </center>
+                            </form>
+                        </div>
+                        <div class="footer_re">
+                            <button name="bottoneRegistrazione"> Registrazione</button>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    
+    
+</body>
+</html>
