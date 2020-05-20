@@ -5,22 +5,27 @@
     <body>
         <?php
 
-            $db = pg_connect("host=localhost port=5432 dbname=Imago_test user=postgres password=password")
-            or die('Errore! Impossibile connettersi al DB: ' . pg_last_error());
+            $db = mysql_connect('localhost') OR die(mysql_error());
+            if($db == FALSE){
+                echo "Impossibile connettersi al DB";
+            }
+            mysql_select_db("my_imago2020");
 
             /* Reindirizzamento alla pagina principale se la pagina
              * non è stata richiamata dal bottone di registrazione */
             if(!(isset($_POST['bottoneLogin']))){
                 header("Location: ../Pre/PreIndice.html");
-            }
+            } 
             /* Controlo dei dati del login */
             else{
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $ricordami = isset($_POST['ricordami'])?$_POST['ricordami']:'';
-                $q_check = "SELECT * FROM utente WHERE email=$1 AND password=$2";
-                $result = pg_query_params($db, $q_check, array($email, $password));
-                if($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
+                $q_check = sprintf("SELECT * FROM utente WHERE email='%s' AND password='%s'",
+                                mysql_real_escape_string($email),
+                                mysql_real_escape_string($password));
+                $result = mysql_query($q_check);
+                if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     if($ricordami != ''){
                         echo "<script>localLoginTrue()</script>";
                         echo "<h1>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";

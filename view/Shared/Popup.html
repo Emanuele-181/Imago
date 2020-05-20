@@ -198,13 +198,13 @@
                             <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
                         </div>
                         <div class="body">
-                            <form action="#" class="form">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
+                            <form action="../Shared/login.php" method="POST" class="form">
+                                <input name="email" type="email" placeholder="Email">
+                                <input name="password" type="password" placeholder="Password">
+                                <div class="footer">
+                                    <button type="submit" name="bottoneLogin">Login</button>
+                                </div>
                             </form>
-                        </div>
-                        <div class="footer">
-                            <button>Login</button>
                         </div>
                     </div>
                 </th>
@@ -216,18 +216,17 @@
                         </div>
                     
                         <div class="body_re">
-                            <form action="#" class="form_re">
+                            <form action="../Shared/registrazione.php" method="POST" class="form_re">
                                 <center>
-                                <input type="text" placeholder="Nome">
-                                <input type="text" placeholder="Cognome">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
-                                </center>
+                                    <input name="nome" type="text" placeholder="Nome">
+                                    <input name="cognome" type="text" placeholder="Cognome">
+                                    <input name="email" type="email" placeholder="Email">
+                                    <input name="password" type="password" placeholder="Password">
+                                    </center>
+                                    <div class="footer_re">
+                                        <button type="submit" name="bottoneRegistrazione">Registrazione</button>
+                                    </div>
                             </form>
-                        </div>
-                        <div class="footer_re">
-                            <button name="bottoneRegistrazione"> Registrazione</button>
-                        </div>
                     </div>
                 </th>
             </tr>
