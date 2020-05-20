@@ -10,7 +10,7 @@
 /* Controlla se un utente è loggato */
 function checkLogin(){
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
-        $('body').css('filter', 'blur(10px)');
+        document.getElementsByTagName("body")[0].style.filter = "blur(10px)";
         alert('Per accedere a questa pagina devi registrarti o fare il login.');
         if(window.history.length <= 2){
             window.location.replace('../Sito/HomeSito.html');

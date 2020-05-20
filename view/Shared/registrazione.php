@@ -36,9 +36,7 @@
                                 mysql_real_escape_string($cognome),
                                 mysql_real_escape_string($email),
                                 mysql_real_escape_string($password));
-                    echo "prova";
                     $data= mysql_query($q2);
-                    echo $q2;
                     if($data){
                         echo '<script type="text/javascript">sessionLoginTrue();</script>'; /* In questo modo si è già loggati dopo la registrazione */
                         echo "<h1>Registrazione avvenuta con successo</h1>";
