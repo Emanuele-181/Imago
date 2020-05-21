@@ -7,7 +7,8 @@
  * rimanere loggato anche se la sessione viene chiusa spuntando la checkbox
  * ricordami. */
 
-/* Controlla se un utente è loggato */
+/* Controlla se un utente è loggato. Se non è loggato allora esce un alert di avviso 
+   e si viene reindirizzati */
 function checkLogin(){
 
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
@@ -22,6 +23,16 @@ function checkLogin(){
         return false;
     }
     else{
+        document.getElementById("imglogin").style.display="none";
+        document.getElementById("imglogout").style.display="flex";
+    }
+    return true;
+}
+
+/* Controlla se un utente è loggato. Se è loggato cambia il simbolo di login
+   in quello di logout */
+function checkLoginFree(){
+    if(sessionStorage.logged == 'true' || localStorage.logged == 'true'){
         document.getElementById("imglogin").style.display="none";
         document.getElementById("imglogout").style.display="flex";
     }
