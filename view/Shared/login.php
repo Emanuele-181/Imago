@@ -21,7 +21,7 @@
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $ricordami = isset($_POST['ricordami'])?$_POST['ricordami']:'';
-                $q_check = sprintf("SELECT * FROM utente WHERE email='%s' AND password='%s'",
+                $q_check = sprintf("SELECT * FROM utenti WHERE email='%s' AND password='%s'",
                                 mysql_real_escape_string($email),
                                 mysql_real_escape_string($password));
                 $result = mysql_query($q_check);
