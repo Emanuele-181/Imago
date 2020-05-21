@@ -9,6 +9,7 @@
 
 /* Controlla se un utente è loggato */
 function checkLogin(){
+
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
         document.getElementsByTagName("body")[0].style.filter = "blur(10px)";
         alert('Per accedere a questa pagina devi registrarti o fare il login.');
@@ -19,6 +20,10 @@ function checkLogin(){
             window.history.back()
         }
         return false;
+    }
+    else{
+        document.getElementById("imglogin").style.display="none";
+        document.getElementById("imglogout").style.display="flex";
     }
     return true;
 }

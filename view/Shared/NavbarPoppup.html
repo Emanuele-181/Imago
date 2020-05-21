@@ -249,9 +249,11 @@
         </nav>
 
         <div class="nav-item" onclick="toggleLogin()">
-            <a> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;">  </i></a>
+            <a id="imglogin"> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGIN </p> </i> </a>
+            <a id="imglogout" style="display: none;"> <i class="fas fa-sign-out-alt" style="z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGOUT </p> </i> </a>
         </div>
 
+        
 
 
         <!--popup-->
@@ -265,8 +267,8 @@
                             </div>
                             <div class="body">
                                 <form action="../Shared/login.php" method="POST" class="form">
-                                    <input name="email" type="email" placeholder="Email">
-                                    <input name="password" type="password" placeholder="Password">
+                                    <input name="email" type="email" placeholder="Email" required>
+                                    <input name="password" type="password" placeholder="Password" required>
                                     <div class="footer">
                                         <button type="submit" name="bottoneLogin">Login</button>
                                     </div>
@@ -284,10 +286,10 @@
                             <div class="body_re">
                                 <form action="../Shared/registrazione.php" method="POST" class="form_re">
                                     <center>
-                                        <input name="nome" type="text" placeholder="Nome">
-                                        <input name="cognome" type="text" placeholder="Cognome">
-                                        <input name="email" type="email" placeholder="Email">
-                                        <input name="password" type="password" placeholder="Password">
+                                        <input name="nome" type="text" placeholder="Nome" required>
+                                        <input name="cognome" type="text" placeholder="Cognome" required>
+                                        <input name="email" type="email" placeholder="Email" required>
+                                        <input name="password" type="password" placeholder="Password" required>
                                         </center>
                                         <div class="footer_re">
                                             <button type="submit" name="bottoneRegistrazione">Registrazione</button>
