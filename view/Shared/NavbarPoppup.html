@@ -284,12 +284,12 @@
                             </div>
                         
                             <div class="body_re">
-                                <form action="../Shared/registrazione.php" method="POST" class="form_re">
+                                <form name="formRegistrazione"action="../Shared/registrazione.php" method="POST" class="form_re" onsubmit="return validazioneForm();">
                                     <center>
-                                        <input name="nome" type="text" placeholder="Nome" required>
-                                        <input name="cognome" type="text" placeholder="Cognome" required>
+                                        <input name="nome" type="text" placeholder="Nome" required onchange="return checkNome();">
+                                        <input name="cognome" type="text" placeholder="Cognome" required onchange="return checkCognome();">
                                         <input name="email" type="email" placeholder="Email" required>
-                                        <input name="password" type="password" placeholder="Password" required>
+                                        <input name="password" type="password" placeholder="Password" required onchange="return checkPassowrd();">
                                         </center>
                                         <div class="footer_re">
                                             <button type="submit" name="bottoneRegistrazione">Registrazione</button>
