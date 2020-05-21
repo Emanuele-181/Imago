@@ -7,12 +7,9 @@
  * rimanere loggato anche se la sessione viene chiusa spuntando la checkbox
  * ricordami. */
 
-/* Controlla se un utente è loggato. Se non è loggato allora esce un alert di avviso 
-   e si viene reindirizzati */
+/* Controlla se un utente è loggato */
 function checkLogin(){
-
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
-        document.getElementsByTagName("body")[0].style.filter = "blur(10px)";
         alert('Per accedere a questa pagina devi registrarti o fare il login.');
         if(window.history.length <= 2){
             window.location.replace('../Sito/HomeSito.html');
@@ -21,20 +18,6 @@ function checkLogin(){
             window.history.back()
         }
         return false;
-    }
-    else{
-        document.getElementById("imglogin").style.display="none";
-        document.getElementById("imglogout").style.display="flex";
-    }
-    return true;
-}
-
-/* Controlla se un utente è loggato. Se è loggato cambia il simbolo di login
-   in quello di logout */
-function checkLoginFree(){
-    if(sessionStorage.logged == 'true' || localStorage.logged == 'true'){
-        document.getElementById("imglogin").style.display="none";
-        document.getElementById("imglogout").style.display="flex";
     }
     return true;
 }
@@ -59,5 +42,12 @@ function localLoginFalse(){
     localStorage.logged = 'false';
 }
 
-
-
+/* Se loggati inverte il simbolo di login */
+function selectImage(){
+    if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
+        document.write('<a id="imglogin"> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br>' + '<p style="font-family:' + " 'Poiret One'" + ', cursive; font-size: 20px; text-align: center;"> LOGIN </p> </i> </a>');
+    }
+    else{
+        document.write('<a id="imglogout" style="display: none;"> <i class="fas fa-sign-out-alt" style="z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br>' + '<p style="font-family:' +" 'Poiret One'" + ', cursive; font-size: 20px; text-align: center;"> LOGOUT </p> </i> </a>');
+    }
+}
