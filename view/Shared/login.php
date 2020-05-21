@@ -28,11 +28,11 @@
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     if($ricordami != ''){
                         echo "<script>localLoginTrue()</script>";
-                        echo "<h1>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";
+                        echo "<script>window.history.back()</script>";
                     }
                     else{
                         echo "<script>sessionLoginTrue()</script>";
-                        echo "<h1>Login effettuato con successo.</h1>";
+                        echo "<script>window.history.back()</script>";
                     }
                 }
                 else{
