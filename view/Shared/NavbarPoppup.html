@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">        
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
+
+        <script src="../Script/cookies.js"></script>
         
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -248,9 +250,9 @@
 
         </nav>
 
-        <div class="nav-item" onclick="toggleLogin()">
-            <a id="imglogin"> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGIN </p> </i> </a>
-            <a id="imglogout" style="display: none;"> <i class="fas fa-sign-out-alt" style="z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGOUT </p> </i> </a>
+        <div class="nav-item">
+            <a id="imglogin"  onclick="toggleLogin()"> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGIN </p> </i> </a>
+            <a id="imglogout" style="display: none;" onclick="logout()"> <i class="fas fa-sign-out-alt" style="z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGOUT </p> </i> </a>
         </div>
 
         
@@ -300,6 +302,8 @@
                 </tr>
             </table>
         </div>
+
+        <script>inverti()</script>
  
 </body>
 </html>
