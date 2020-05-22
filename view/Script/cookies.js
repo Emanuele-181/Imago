@@ -61,5 +61,6 @@ function inverti(){
 
 function logout(){
     sessionLoginFalse();
-    localLoginFalse()
+    localLoginFalse();
+    location.reload();
 }
