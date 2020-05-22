@@ -21,18 +21,18 @@
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $ricordami = isset($_POST['ricordami'])?$_POST['ricordami']:'';
-                $q_check = sprintf("SELECT * FROM utenti WHERE email='%s' AND password='%s'",
+                $q_check = sprintf("SELECT * FROM utente WHERE email='%s' AND password='%s'",
                                 mysql_real_escape_string($email),
                                 mysql_real_escape_string($password));
                 $result = mysql_query($q_check);
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     if($ricordami != ''){
                         echo "<script>localLoginTrue()</script>";
-                        echo "<script>window.history.back()</script>";
+                        echo "<h1>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";
                     }
                     else{
                         echo "<script>sessionLoginTrue()</script>";
-                        echo "<script>window.history.back()</script>";
+                        echo "<h1>Login effettuato con successo.</h1>";
                     }
                 }
                 else{

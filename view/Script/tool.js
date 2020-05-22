@@ -166,13 +166,13 @@ function seppia(cmd){
 function negativo(cmd){
     if(cmd == '+'){
         if(obj_mod.negativo_var >= 100) return;
-        obj_mod.negativo_var = obj_mod.negativo_var + 100;
+        obj_mod.negativo_var = obj_mod.negativo_var + 10;
         var value = toValue();
         $('#Immagine').css('filter', value);
     }
     else{
         if(obj_mod.negativo_var <= 0) return;
-        obj_mod.negativo_var = obj_mod.negativo_var - 100;
+        obj_mod.negativo_var = obj_mod.negativo_var - 10;
         var value = toValue();
         $('#Immagine').css('filter', value);
     }  
