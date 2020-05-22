@@ -48,4 +48,13 @@ function localLoginFalse(){
     localStorage.logged = 'false';
 }
 
-
+function inverti(){
+    if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
+        document.getElementById("imglogin").style.display="flex";
+        document.getElementById("imglogout").style.display="none";
+    }
+    else{
+        document.getElementById("imglogin").style.display="none";
+        document.getElementById("imglogout").style.display="flex";
+    }
+}
