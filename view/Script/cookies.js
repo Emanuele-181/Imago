@@ -21,10 +21,10 @@ function checkLogin(){
         }
         return false;
     }
-    else{
+    /* else{
         document.getElementById("imglogin").style.display="none";
         document.getElementById("imglogout").style.display="flex";
-    }
+    } */
     return true;
 }
 
@@ -47,6 +47,5 @@ function sessionLoginFalse(){
 function localLoginFalse(){
     localStorage.logged = 'false';
 }
-
 
 
