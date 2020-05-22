@@ -20,7 +20,7 @@
              * con la stessa email */
             else{
                 $email = $_POST['email'];
-                $q_check = sprintf("SELECT * FROM utente WHERE email='%s'", 
+                $q_check = sprintf("SELECT * FROM utenti WHERE email='%s'", 
                                 mysql_real_escape_string($email));
                 $result = mysql_query($q_check);
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
