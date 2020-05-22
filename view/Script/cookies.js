@@ -58,3 +58,8 @@ function inverti(){
         document.getElementById("imglogout").style.display="flex";
     }
 }
+
+function logout(){
+    sessionLoginFalse();
+    localLoginFalse()
+}
