@@ -3,7 +3,7 @@
         <script src="../Script/cookies.js"></script>
         <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">
     </head>
-    <body class = " bg-dark text-light">
+    <body class = " bg-dark">
         <?php
 
             $db = mysql_connect('localhost') OR die(mysql_error());
@@ -29,16 +29,25 @@
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     if($ricordami != ''){
                         echo "<script>localLoginTrue()</script>";
-                        echo "<h1 class = 'display-4'>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";
+                        echo "<h1 class='display-4 text-center text-light'>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>
+                                <center>
+                                <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>";
                     }
                     else{
                         echo "<script>sessionLoginTrue()</script>";
-                        echo "<h1 class = 'display-4>Login effettuato con successo.</h1>";
+                        echo "<h1 class='display-4 text-center text-light'>Login effettuato con successo.</h1>
+                                <center>
+                                <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>";
                     }
                 }
                 else{
-                    echo "<h1 class = 'display-4>Non sei registrato!</h1>
-                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
+                    echo "<h1 class='display-4 text-center text-light'>Non sei registrato!</h1>
+                            <center>
+                            <img calss='justify-content-center' src='../../utility//Img//red-x.png' height='200px'>
+                            </center>
+                            <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
                 }
             }
 

@@ -1,8 +1,9 @@
 <html>
     <head>
         <script src="../Script/cookies.js"></script>
+        <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">
     </head>
-    <body>
+    <body class = " bg-dark">
         <?php
 
             $db = mysql_connect('localhost') OR die(mysql_error());
@@ -24,8 +25,8 @@
                                 mysql_real_escape_string($email));
                 $result = mysql_query($q_check);
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
-                    echo "<h1>Sei già registrato, esegui il login per accedere!</h1>
-                    <a href=../Sito/HomeSito.html>HOME</a>";
+                    echo "<h1 class='display-4 text-center text-light'>Sei già registrato, esegui il login per accedere!</h1>
+                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
                 }
                 else{
                     $nome=$_POST['nome'];
@@ -39,8 +40,11 @@
                     $data= mysql_query($q2);
                     if($data){
                         echo '<script type="text/javascript">sessionLoginTrue();</script>'; /* In questo modo si è già loggati dopo la registrazione */
-                        echo "<h1>Registrazione avvenuta con successo</h1>";
-                        echo "<a href='../Sito/HomeSito.html'>HOME</a>";
+                        echo "<h1 class='display-4 text-center text-light'>Registrazione avvenuta con successo</h1>
+                                <center>
+                                <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>";
+                        echo "<a class='btn btn-outline-warning' href='../Sito/HomeSito.html'>HOME</a>";
                     }
                 }
             }
