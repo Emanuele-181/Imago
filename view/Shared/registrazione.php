@@ -26,7 +26,9 @@
                 $result = mysql_query($q_check);
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     echo "<h1 class='display-4 text-center text-light'>Sei già registrato, esegui il login per accedere!</h1>
-                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
+                    <center>
+                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                    </center>";
                 }
                 else{
                     $nome=$_POST['nome'];
@@ -43,8 +45,10 @@
                         echo "<h1 class='display-4 text-center text-light'>Registrazione avvenuta con successo</h1>
                                 <center>
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>
+                                <center>
+                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
-                        echo "<a class='btn btn-outline-warning' href='../Sito/HomeSito.html'>HOME</a>";
                     }
                 }
             }

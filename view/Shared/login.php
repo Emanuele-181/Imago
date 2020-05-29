@@ -32,6 +32,9 @@
                         echo "<h1 class='display-4 text-center text-light'>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>
                                 <center>
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>
+                                <center>
+                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
                     }
                     else{
@@ -39,6 +42,9 @@
                         echo "<h1 class='display-4 text-center text-light'>Login effettuato con successo.</h1>
                                 <center>
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
+                                </center>
+                                <center>
+                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
                     }
                 }
@@ -47,7 +53,10 @@
                             <center>
                             <img calss='justify-content-center' src='../../utility//Img//red-x.png' height='200px'>
                             </center>
-                            <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
+                            <center>
+                            <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                            </center>";
+                            
                 }
             }
 
