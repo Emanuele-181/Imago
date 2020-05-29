@@ -1,8 +1,9 @@
 <html>
     <head>
         <script src="../Script/cookies.js"></script>
+        <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">
     </head>
-    <body>
+    <body class = " bg-dark text-light">
         <?php
 
             $db = mysql_connect('localhost') OR die(mysql_error());
@@ -28,16 +29,16 @@
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     if($ricordami != ''){
                         echo "<script>localLoginTrue()</script>";
-                        echo "<h1>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";
+                        echo "<h1 class = 'display-4'>Login effettuato con successo. Verrai ricordato nelle prossime sessioni</h1>";
                     }
                     else{
                         echo "<script>sessionLoginTrue()</script>";
-                        echo "<h1>Login effettuato con successo.</h1>";
+                        echo "<h1 class = 'display-4>Login effettuato con successo.</h1>";
                     }
                 }
                 else{
-                    echo "<h1>Non sei registrato!</h1>
-                    <a href=../Sito/HomeSito.html>HOME</a>";
+                    echo "<h1 class = 'display-4>Non sei registrato!</h1>
+                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>HOME</a>";
                 }
             }
 
