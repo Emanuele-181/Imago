@@ -34,7 +34,7 @@
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
                                 </center>
                                 <center>
-                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                                <a class='btn btn-outline-warning' style = 'margin-top: 25px;' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
                     }
                     else{
@@ -44,7 +44,7 @@
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
                                 </center>
                                 <center>
-                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                                <a class='btn btn-outline-warning' style = 'margin-top: 25px;' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
                     }
                 }
@@ -54,7 +54,7 @@
                             <img calss='justify-content-center' src='../../utility//Img//red-x.png' height='200px'>
                             </center>
                             <center>
-                            <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                            <a class='btn btn-outline-warning' style = 'margin-top: 25px;' href=../Sito/HomeSito.html>Torna alla HOME</a>
                             </center>";
                             
                 }

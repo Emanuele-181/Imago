@@ -27,7 +27,7 @@
                 if($line = mysql_fetch_array($result, MYSQL_ASSOC)){
                     echo "<h1 class='display-4 text-center text-light'>Sei già registrato, esegui il login per accedere!</h1>
                     <center>
-                    <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                    <a class='btn btn-outline-warning' style = 'margin-top: 25px;' href=../Sito/HomeSito.html>Torna alla HOME</a>
                     </center>";
                 }
                 else{
@@ -46,8 +46,8 @@
                                 <center>
                                 <img calss='justify-content-center' src='../../utility//Img//green-tick.png' height='200px'>
                                 </center>
-                                <center>
-                                <a class='btn btn-outline-warning' href=../Sito/HomeSito.html>Torna alla HOME</a>
+                                <center style = ''>
+                                <a class='btn btn-outline-warning' style = 'margin-top: 25px;' href=../Sito/HomeSito.html>Torna alla HOME</a>
                                 </center>";
                     }
                 }
