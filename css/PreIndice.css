@@ -99,6 +99,7 @@ body {
             
         }
         .card .container p{
+            margin-bottom: 0;
             height: 30%;
             width: 80%;
             position: absolute; 
@@ -107,6 +108,9 @@ body {
             transform: translate(-50%, 0%);
             background: rgba(0, 0, 0, 0.5);
             padding: 30px;
+            text-align: center;
+            font-family: 'Poiret One';
+            font-size: 25px;
             
           }
 
