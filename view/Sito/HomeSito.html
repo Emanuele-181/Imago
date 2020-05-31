@@ -68,7 +68,7 @@
             }
             
             /*show gallery*/
-            .mySlides {
+            .foto {
                 display:none;
                 width: auto;
                 height: 600px;
@@ -125,33 +125,33 @@
         <!--Slideshow automati-->
         
         <div class="slider">
-            <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide3.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide4.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide5.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide6.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide1.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide2.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide3.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide4.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide5.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide6.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide7.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide8.jpg" style="width:100%">
         </div>
        
 
         <script>
-            var myIndex = 0;
-            carousel();
+            var indice = 0;
+            scorrimento();
 
-            function carousel() {
+            function scorrimento() {
                 var i;
-                var x = document.getElementsByClassName("mySlides");
+                var x = document.getElementsByClassName("foto");
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";  
                 }
-                myIndex++;
-                if (myIndex > x.length) {
-                    myIndex = 1;
+                indice++;
+                if (indice > x.length) {
+                    indice = 1;
                 }    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 5000); // Change image every 2 seconds
+                x[indice-1].style.display = "block";  
+                setTimeout(scorrimento, 5000); 
             }
         </script>
         
