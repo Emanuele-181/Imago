@@ -237,7 +237,7 @@
                         <br>
                         <button id="bottoneAntica"> Antica</button>
                         <button id="bottoneModerna"> Moderna</button>
-                        <button id="bottoneCuriosità"> Curiosità</button>
+                        <button id="bottoneCuriosita"> Curiosità</button>
                 <br>
                 <br>
                     </div>
@@ -264,7 +264,7 @@
                           </div>
                 
                           
-                          <div class="column1" id="zonaStoriaCuriosità">
+                          <div class="column1" id="zonaStoriaCuriosita">
                            <p > Click sul bottone "Curiosità" per visualizzare il documento!</p>
 
                             </div>
@@ -293,9 +293,9 @@
                     
                     });
 
-                    $("#bottoneCuriosità").click(function(){
+                    $("#bottoneCuriosita").click(function(){
                        
-                        $("#zonaStoriaCuriosità").load("Curiosità.html", function(responseTxt, statusTxt, xhr){
+                        $("#zonaStoriaCuriosita").load("Curiosita.html", function(responseTxt, statusTxt, xhr){
                             
                     
                     if(statusTxt == "error") alert("Errore nel caricamento del file,"+xhr.status+":"+xhr.statusText);
