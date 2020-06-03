@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
-
+    
+    <meta charset="utf-8"/>
+    <title>IMAGO Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>    
 
         <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
-        <link rel="stylesheet" href="../../css/animate.css">
-        
-
-        <meta charset="utf-8"/>
-            <title>IMAGO-Home</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        
+       
+    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/bootstrap.js"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!--script animate css-->
-        <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/viewportchecker.js"></script>
-        <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/custom.js"></script>
         
         
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
@@ -39,8 +30,8 @@
 
            @media(max-width: 1900px){
                 .larghezza_150{
-                    transform: scale(0.65, 0.65); 
-                }
+                transform: scale(0.65, 0.65); 
+            }
                
       
            }
@@ -77,7 +68,7 @@
             }
             
             /*show gallery*/
-            .mySlides {
+            .foto {
                 display:none;
                 width: auto;
                 height: 600px;
@@ -111,7 +102,7 @@
             }
 
             .flash:active{
-                 background-color: rgb(240, 245, 170);
+                background-color: rgb(240, 245, 170);
                 border-radius: 500px;
             }
         </style>
@@ -134,38 +125,40 @@
         <!--Slideshow automati-->
         
         <div class="slider">
-            <img class="mySlides" src="../../utility/Img/slide1.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide2.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide3.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide4.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide5.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide6.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide7.jpg" style="width:100%">
-            <img class="mySlides" src="../../utility/Img/slide8.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide1.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide2.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide3.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide4.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide5.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide6.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide7.jpg" style="width:100%">
+            <img class="foto" src="../../utility/Img/slide8.jpg" style="width:100%">
         </div>
        
 
         <script>
-            var myIndex = 0;
-            carousel();
+            //funzione per lo scorrimento delle immagini
+            var indice = 0;
+            scorrimento();
 
-            function carousel() {
+            function scorrimento() {
                 var i;
-                var x = document.getElementsByClassName("mySlides");
+                var x = document.getElementsByClassName("foto");
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";  
                 }
-                myIndex++;
-                if (myIndex > x.length) {
-                    myIndex = 1;
+                indice++;
+                if (indice > x.length) {
+                    indice = 1;
                 }    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 2000); // Change image every 2 seconds
+                x[indice-1].style.display = "block";  
+                setTimeout(scorrimento, 5000); 
             }
         </script>
         
         
         <div class="larghezza_150">
+            <!-- contiene la polaroid, la scritta e la foto che appare -->
             <table>
     
                 <tr>
@@ -184,7 +177,7 @@
                 
                     <th class="fotopop">
                         <i id="fotopop_x" class="fas fa-times"  style="cursor: pointer; text-align: left;"  onclick="fpolaroid()"></i>
-                        <img src="../../utility/Img/foto.jpg" >
+                        <img src="../../utility/Img/foto.svg" >
                     </th>
                 </tr>
             </table>

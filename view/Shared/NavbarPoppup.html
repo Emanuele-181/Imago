@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
-        
+   
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+        <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">        
+        <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
+
+        <script src="../Script/cookies.js"></script>
+        
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/bootstrap.js"></script>
-        
+
+       
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
-        
         <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptNavbarPopup.js"></script>
 
-    
+        
         <style>
 
             /*font navbar*/@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
@@ -219,10 +220,10 @@
         
 
         <!--Creo la navbar-->
-        <nav class="navbar navbar-expand-md" style="z-index: 1; position: absolute; top: 0;">
+        <nav class="navbar navbar-expand-md navbar-dark bg" style="z-index: 1; position: absolute; top: 0; color: white;">
             
             <!--Creo il buttone mobile-->
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target" style="z-index: 2;">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!--Rende la navbar stabile-->
@@ -249,10 +250,12 @@
 
         </nav>
 
-        <div class="nav-item" onclick="toggleLogin()">
-            <a> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;">  </i></a>
+        <div class="nav-item">
+            <a id="imglogin"  onclick="toggleLogin()"> <i class="icona_utente fas fa-users" style=" z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGIN </p> </i> </a>
+            <a id="imglogout" style="display: none;" onclick="logout()"> <i class="fas fa-sign-out-alt" style="z-index: 1;font-size:60px; color:white; cursor: pointer; position: absolute; top: 1%; right:2%;"> <br> <p style="font-family: 'Poiret One', cursive; font-size: 20px; text-align: center;"> LOGOUT </p> </i> </a>
         </div>
 
+        
 
 
         <!--popup-->
@@ -265,13 +268,13 @@
                                 <h1 style="font-family: 'Poiret One', cursive; font-weight: bold;">Login</h1>
                             </div>
                             <div class="body">
-                                <form action="#" class="form">
-                                    <input type="email" placeholder="Email">
-                                    <input type="password" placeholder="Password">
+                                <form action="../Shared/login.php" method="POST" class="form">
+                                    <input name="email" type="email" placeholder="Email" required>
+                                    <input name="password" type="password" placeholder="Password" required>
+                                    <div class="footer">
+                                        <button type="submit" name="bottoneLogin">Login</button>
+                                    </div>
                                 </form>
-                            </div>
-                            <div class="footer">
-                                <button>Login</button>
                             </div>
                         </div>
                     </th>
@@ -283,23 +286,24 @@
                             </div>
                         
                             <div class="body_re">
-                                <form action="#" class="form_re">
+                                <form name="formRegistrazione" action="../Shared/registrazione.php" method="POST" class="form_re" onsubmit="return validazioneForm();">
                                     <center>
-                                    <input type="text" placeholder="Nome">
-                                    <input type="text" placeholder="Cognome">
-                                    <input type="email" placeholder="Email">
-                                    <input type="password" placeholder="Password">
-                                    </center>
+                                        <input name="nome" type="text" placeholder="Nome" required onchange="return checkNome();">
+                                        <input name="cognome" type="text" placeholder="Cognome" required onchange="return checkCognome();">
+                                        <input name="email" type="email" placeholder="Email" required>
+                                        <input name="password" type="password" placeholder="Password" required onchange="return checkPassowrd();">
+                                        </center>
+                                        <div class="footer_re">
+                                            <button type="submit" name="bottoneRegistrazione">Registrazione</button>
+                                        </div>
                                 </form>
-                            </div>
-                            <div class="footer_re">
-                                <button name="bottoneRegistrazione"> Registrazione</button>
-                            </div>
                         </div>
                     </th>
                 </tr>
             </table>
         </div>
+
+        <script>inverti()</script>
  
 </body>
 </html>

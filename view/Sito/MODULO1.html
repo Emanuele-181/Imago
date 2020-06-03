@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 
+    
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
@@ -13,13 +14,14 @@
 
         .bottonim1 button{
                 border-radius: 20px;
-                font-size: 15px; 
+                font-size: 2vw; 
                 margin-bottom: 50px;
                 font-family: 'Poiret One', cursive;
                 text-align: center;
                 background-color:rgb(48, 49, 58);
                 color: white;
-                border: none
+                border: none;
+                
                 
                 
             }
@@ -69,35 +71,36 @@
 
         <b style="color: rgb(201, 197, 197);">Sarà necessario l'utilizzo di un treppiede, al fine di evitare foto mosse.</b>
     </p>
-      
+      <center>
     <table class="bottonim1" style="min-height:100px;">
-        <tr>
+        <!-- bottoni per la visualizzazione delle immagini al click dei button -->
+        <tr >
             <th>
-                <button class="btn" onclick="caricaImg('../../utility/Img/immagine1lento.jpg', '#apparizione');">Immagine1Lento</button>
+                <button class="btn" onclick="caricaImg('../../utility/Img/1_200.jpeg', '#apparizione');" style="margin-right: 50px;  margin-left: 10px;">1/200s</button>
 
             </th>
             <th>
-                <button class="btn" style="margin-right: 200px; margin-left: 10px;">Immagine1Veloce</button>
+                <button class="btn" onclick="caricaImg('../../utility/Img/1_150.jpeg', '#apparizione');"style="margin-right: 50px;  margin-left: 10px;">1/150s</button>
             </th>
         
            <th>
-                <button class="btn">Immagine2Lento</button>
-           </th>
+            <button class="btn" onclick="caricaImg('../../utility/Img/1_100.jpeg', '#apparizione');"style="margin-right: 50px;  margin-left: 10px;">1/100s</button>
+        </th>
            <th>
-                <button class="btn" style="margin-right: 200px;  margin-left: 10px;">Immagine2Veloce</button>
-           </th>
+            <button class="btn" onclick="caricaImg('../../utility/Img/1_50.jpeg', '#apparizione');"style="margin-right: 50px;  margin-left: 10px;">1/50</button>
+        </th>
 
            <th>
-                <button class="btn">Immagine3Lento</button>
-           </th>
+            <button class="btn" onclick="caricaImg('../../utility/Img/1s.jpeg', '#apparizione');"style="margin-right: 50px;  margin-left: 10px;">1s</button>
+        </th>
            <th>
-                <button class="btn" style=" margin-left: 10px;" onclick="caricaImg('../../utility/Img/immagine3veloce.jpg', '#apparizione');">Immagine3Veloce</button>
-           </th>
+            <button class="btn" onclick="caricaImg('../../utility/Img/3s.jpeg', '#apparizione');"style="margin-right: 50px;  margin-left: 10px;">3s</button>
+        </th>
         </tr>
     </table>
-    
+</center>
     <center>
-    <div id="apparizione" style="margin-bottom: 50px;"></div>
+    <div id="apparizione" style="margin-bottom: 50px;border-left: 100px; border-radius: 30px;"></div>
     </center>
         
        

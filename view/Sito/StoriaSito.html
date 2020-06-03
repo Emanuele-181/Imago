@@ -1,11 +1,12 @@
 
 <html>
     <head>
-        <!-- Sezione Script -->
-        <title>Questa è la pagina dedicata alla storia della fotografia.</title>
+        
+        <title>Imago Storia</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Sezione Script -->
 
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
         <meta charset="utf-8"/>
@@ -16,6 +17,10 @@
         <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
     
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/bootstrap.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
 
@@ -23,13 +28,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
             
-                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 
         <!-- Sezione Stile -->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
             
+            /* @media è una regola che adatta la visione in base alla grandezza del display del dispositivo(rende il sito responsive) */
+            /* block blocca l'elemento su una riga */
             @media (max-width: 640px) { 
                 .classeTesto {font-size:4rem; padding:60% 0 0 0} 
             } 
@@ -77,9 +85,8 @@
             } 
 
                 /*navbar*/
-                #idhome{
+            #idhome{
                 text-decoration: none;
-                
                 cursor: pointer;
             }
             #corso{
@@ -94,7 +101,6 @@
                 text-decoration: underline;
                 cursor: pointer;
                 font-weight: bold;
-                
             }   
             #shop{
                 text-decoration: none;
@@ -103,17 +109,16 @@
             #chisiamo{
                 text-decoration: none;
                 cursor: pointer;
-                
             }
 
                 
         
             .view {
-                background: url("https://images.unsplash.com/photo-1534939618208-e604c88fcffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80")no-repeat center center;
+                background: url("https://images.unsplash.com/photo-1534939618208-e604c88fcffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80")repeat-x center center;
                 width: 100vw;
                     }
-            /*font navbar e citazione*/  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-            /*font scritta polaroid*/ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+            /*font navbar */  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+            /*font */ @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
                                         @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
             html {
@@ -123,7 +128,7 @@
             
             /* * Mi seleziona tutti gli elementi */       
             /* Box-sizing inherit fa in modo che vengano calcolate le dimensioni degli elementi in base allo spazio che occupano, andando ad ereditare dagli altri la 
-            grandezza Ottimale per far sì che le tre colonne stiano nella stessa riga in modo ottimale */
+            grandezza per far sì che le tre colonne stiano nella stessa riga in modo ottimale */
             *, *:before, *:after {
                 box-sizing: inherit;
             }
@@ -135,9 +140,18 @@
                 width: 33.3%;
                 margin-bottom: 16px;
                 padding: 50px 16px;
+                border:solid 0.5px white;
+                border-radius: 40px;
+                
                 
             }
-                            
+
+            .column1:hover{
+                box-shadow: 0px 0px 10px;
+                border-radius: 40px;
+               
+            }      
+
             /* @media è una regola che adatta la visione delle colonne in base alla grandezza del display del dispositivo(rende il sito responsive) */
             /* block blocca l'elemento su una riga */
             @media screen and (max-width: 650px) {
@@ -145,6 +159,7 @@
                 width: 100%;
                 display: block;
                 }
+               
             }                           
             
             /* Stile dei container  */
@@ -161,7 +176,30 @@
                 clear: both;
                 display: table;
             }
-                            
+            .sottoTitolo{
+                
+                 border: 0.5px black solid;
+                 
+                 width: 90%;
+                 background-color:rgba(231, 207, 175, 0.144) ;
+                 font-family: 'Julius Sans One', sans-serif; 
+                 font-size: 20px; 
+                 border-radius: 5px ;
+                 
+            }          
+            .sottoTitolo:hover{
+                box-shadow: 1px 1px 2px 2px rgb(231, 207, 193);
+                border:none;
+                border:0.5px rgb(233,189,163) solid;
+                
+            }  
+            .coloreMedioChiaro{
+                color:rgba(37, 36, 34, 0.774);
+            }
+
+            .coloreChiaro{
+                color:rgba(250, 235, 215, 0.836);
+            }
                             
         </style>
     </head>
@@ -181,106 +219,98 @@
         <h1 class="classeTesto"align="right" style="color:whitesmoke;font-family: 'Spartan', sans-serif; ">STORIA</h1></div>
         
         
+        <br>
             
         <main  style="background-image: linear-gradient( rgba(122, 121, 102, 0.075),rgba(8, 8, 4, 0.308),rgb(71, 32, 10)) ; min-height: 100%;">    
-            <div class="container" style="padding:400px 0 0 0">
-                <div class="row1">
-                    <div style="font-family: 'Spartan', sans-serif; font-size: 20px;">
-                        <!-- Riga di disposizione  -->
-                        <div class="row1"> 
+            <div class="container" >
+              <!-- Container contentente il testo e i 3 button da cliccare per visualizzare i documenti nelle zone dinamiche "zonaStoriaAntica,zonaStoriaModerna,zonaStoriaCuriosità-->
 
-                          <div class="column1">
-                            La prima fotografia della storia (1826) è il tentativo di fissare la veduta da una finestra, sfruttando le capacità d’annerimento del bitume di Giudea su una lastra di peltro, con una posa di circa otto ore.
+                <center>
+                    <div class="sottoTitolo" style="padding: 350px 0 0 0;">
+                        <!-- div introduttivo -->
+                        La fotografia è stata, fin dai suoi primi passi, un mezzo amatissimo. Fotografando si può documentare, sperimentare, ricordare. Se cento anni fa possedere una macchina fotografica era 
+                        una rarità, oggi non andiamo praticamente da nessuna parte senza una fotocamera digitale. Tutto deve essere immortalato dai nostri scatti: ogni pasto, vacanza o party devono essere 
+                        conservati per l'eternità grazie a questo piccolo assistente che non ci abbandona mai. La fotografia oggi non è più qualcosa di cui si possa fare a meno.
+                        Da più di 175 anni è entrata nella vita di ogni uomo e da allora è stata protagonista di un processo evolutivo continuo e senza fine. La nostra carrellata vi mostrerà in nove tappe
+                        gli sviluppi più importanti di questo processo evolutivo e le scoperte che hanno rivoluzionato il concetto di fotografia.
+                        <br>
+                        <br>
+                        Seleziona la categoria che vuoi visualizzare!
+                        <br>
+                        <!-- Bottini da cliccare -->
+                        <button style="color:black" id="bottoneAntica"> Antica</button>
+                        <button style="color:black" id="bottoneModerna"> Moderna</button>
+                        <button style="color:black" id="bottoneCuriosita"> Curiosità</button>
+                <br>
+                <br>
+                    </div>
+                </center>
                 
-                            Il suo autore Nicéphore Niepce, interessato soprattutto alla riproduzione litografica, cerca un socio e lo trova in Philippe Daguerre, scenografo parigino ossessionato dalla riproduzione meccanica della realtà. Daguerre è già celebre nella capitale per i suoi spettacoli di diorama ed ha buone aderenze politiche.
-                
-                            VISTA DALLA FINESTRA A LE GRAS, LA PRIMA FOTOGRAFIA DELLA STORIA
-                            Quando mette a punto, insieme al figlio di Niepce, il dagherrotipo, il deputato Jean-François Aragon presenta l’invenzione all’Accademia delle Scienze (1839) chiedendo un vitalizio per i due inventori in cambio dell’acquisizione pubblica del brevetto.
+                <div class="row1"></div>
+                    <div style="font-family: 'Spartan', sans-serif; font-size: 20px;">
+                        
+                        <br>
+                        <div class="row1"> 
                             
-                            In quegli anni la fotografia è in realtà nell’aria. Dalla Gran Bretagna Henry Fox-Talbot si affretta a pubblicare la sua invenzione, il calotipo, un negativo fotografico su carta che permette la stampa di più copie. Fox-Talbot risolve così alcuni dei problemi più gravi del dagherrotipo, fragile e costoso nei materiali e soprattutto in copia unica, ma ineguagliabile per nitidezza.
                             
-                            HENRY FOX TALBOTT
-                            Un altro parigino, Hippolyte Bayard ha sviluppato in contemporanea un propria tecnica che permette la riproduzione di più copie, ma Aragon, deciso a favorire Daguerre, lo allontana dalla ribalta: la foto più celebre di  Bayard realizzata con la sua tecnica è un autoritratto fotografico in cui appare come un annegato, esplicitando il senso sarcastico nella didascalia.
-                            
-                            È però uno scienziato a sancire l’avvento della fotografia e del suo nome (suoi anche i termini “negativo” e “positivo”): Sir John Herschel stabilisce con l’iposolfito di sodio il metodo di fissaggio dell’immagine latente, soluzione definitiva al problema della stabilità dell’immagine.
-                            
-                            Nel frattempo la fotografia viene in aiuto alla pittura codificando nel ritratto uno dei suoi campi di impiego e di espressione artistica. In Scozia è il pittore David Octavius Hill insieme a Robert Adamson a ricorrere alla fotografia per la preparazione di un grande affresco celebrativo di committenza pubblica (1843), dipinto presto dimenticato al contrario del vibrante ritratto della società scozzese (duemila fotografie) uscito dallo studio della coppia di artisti.
-                            
-                            Il genere è comunque destinato a crescere e a trovare grandi interpreti: in America è l’intraprendente Mathew Brady ad aprire lo studio più celebre a New York e a lasciarci i ritratti di Edgar Allan Poe e del giovane deputato Abraham Lincoln, la cui fotografia,  pubblicata sui volantini di propaganda distribuiti per l’elezione a presidente, ne favorirà la vittoria. A Parigi il ritrattista della cultura francese è Gaspard Félix de Tournachon, detto Nadar, autentico bohémien e celebre caricaturista prima di divenire fotografo.
-                            
-                            UN FOTORITRATTO DI LINCOLN DI MATHEW BRADY
-                            Coraggioso e intraprendente, quando il suo studio è ormai rinomato (Charles Baudelaire, Sarah Bernardt, Gérard de Nerval sono solo alcuni dei soggetti ritratti con sorprendente intensità), Nadar si avventura nell’impossibile impresa di fotografare con luce artificiale i sotterranei e le catacombe di Parigi. Appassionato di volo ascensionale (fonda una società per promuoverne la diffusione) inaugura anche la fotografia aerea pubblicando una serie di immagini di Parigi dall’alto riprese dal suo pallone, Le Géant.
-                            
-                            FOTORITRATTO BAUDELAIRE DI NADAR
-                            Altro naturale campo d’utilizzo della fotografia in questi primi anni è la documentazione di viaggi. L’archeologia, i cui misteri animano cultura e fantasie ottocentesche, è al centro dell’impresa fotografica dello scrittore Maxime Du Camp, che viaggia per tre anni (1849-1851) in compagnia di Gustave Flaubert tra Egitto, Siria e Palestina (pubblicando una selezione di 125 immagini), e dell’inglese Francis Frith, che viaggia negli stessi luoghi nel 1856 e pubblica con enorme successo due volumi con settanta immagini complessive, stampate e incollate a mano su ogni copia.
-                            
-                            In copertina: Francis Frith, ‘Statues of the Plain, Thebes’, 1857
-                                    
+                          <div class="column1" id="zonaStoriaAntica">
+                              
+                            <p> Click sul bottone "Antica" per visualizzare il documento! </p> 
+                                  
                           </div>
                 
                           
-                          <div class="column1">
-                            La prima fotografia della storia (1826) è il tentativo di fissare la veduta da una finestra, sfruttando le capacità d’annerimento del bitume di Giudea su una lastra di peltro, con una posa di circa otto ore.
-                
-                            Il suo autore Nicéphore Niepce, interessato soprattutto alla riproduzione litografica, cerca un socio e lo trova in Philippe Daguerre, scenografo parigino ossessionato dalla riproduzione meccanica della realtà. Daguerre è già celebre nella capitale per i suoi spettacoli di diorama ed ha buone aderenze politiche.
-                
-                            VISTA DALLA FINESTRA A LE GRAS, LA PRIMA FOTOGRAFIA DELLA STORIA
-                            Quando mette a punto, insieme al figlio di Niepce, il dagherrotipo, il deputato Jean-François Aragon presenta l’invenzione all’Accademia delle Scienze (1839) chiedendo un vitalizio per i due inventori in cambio dell’acquisizione pubblica del brevetto.
+                          <div class="column1" id="zonaStoriaModerna">
+                            <p > Click sul bottone "Moderna" per visualizzare il documento!</p>
                             
-                            In quegli anni la fotografia è in realtà nell’aria. Dalla Gran Bretagna Henry Fox-Talbot si affretta a pubblicare la sua invenzione, il calotipo, un negativo fotografico su carta che permette la stampa di più copie. Fox-Talbot risolve così alcuni dei problemi più gravi del dagherrotipo, fragile e costoso nei materiali e soprattutto in copia unica, ma ineguagliabile per nitidezza.
-                            
-                            HENRY FOX TALBOTT
-                            Un altro parigino, Hippolyte Bayard ha sviluppato in contemporanea un propria tecnica che permette la riproduzione di più copie, ma Aragon, deciso a favorire Daguerre, lo allontana dalla ribalta: la foto più celebre di  Bayard realizzata con la sua tecnica è un autoritratto fotografico in cui appare come un annegato, esplicitando il senso sarcastico nella didascalia.
-                            
-                            È però uno scienziato a sancire l’avvento della fotografia e del suo nome (suoi anche i termini “negativo” e “positivo”): Sir John Herschel stabilisce con l’iposolfito di sodio il metodo di fissaggio dell’immagine latente, soluzione definitiva al problema della stabilità dell’immagine.
-                            
-                            Nel frattempo la fotografia viene in aiuto alla pittura codificando nel ritratto uno dei suoi campi di impiego e di espressione artistica. In Scozia è il pittore David Octavius Hill insieme a Robert Adamson a ricorrere alla fotografia per la preparazione di un grande affresco celebrativo di committenza pubblica (1843), dipinto presto dimenticato al contrario del vibrante ritratto della società scozzese (duemila fotografie) uscito dallo studio della coppia di artisti.
-                            
-                            Il genere è comunque destinato a crescere e a trovare grandi interpreti: in America è l’intraprendente Mathew Brady ad aprire lo studio più celebre a New York e a lasciarci i ritratti di Edgar Allan Poe e del giovane deputato Abraham Lincoln, la cui fotografia,  pubblicata sui volantini di propaganda distribuiti per l’elezione a presidente, ne favorirà la vittoria. A Parigi il ritrattista della cultura francese è Gaspard Félix de Tournachon, detto Nadar, autentico bohémien e celebre caricaturista prima di divenire fotografo.
-                            
-                            UN FOTORITRATTO DI LINCOLN DI MATHEW BRADY
-                            Coraggioso e intraprendente, quando il suo studio è ormai rinomato (Charles Baudelaire, Sarah Bernardt, Gérard de Nerval sono solo alcuni dei soggetti ritratti con sorprendente intensità), Nadar si avventura nell’impossibile impresa di fotografare con luce artificiale i sotterranei e le catacombe di Parigi. Appassionato di volo ascensionale (fonda una società per promuoverne la diffusione) inaugura anche la fotografia aerea pubblicando una serie di immagini di Parigi dall’alto riprese dal suo pallone, Le Géant.
-                            
-                            FOTORITRATTO BAUDELAIRE DI NADAR
-                            Altro naturale campo d’utilizzo della fotografia in questi primi anni è la documentazione di viaggi. L’archeologia, i cui misteri animano cultura e fantasie ottocentesche, è al centro dell’impresa fotografica dello scrittore Maxime Du Camp, che viaggia per tre anni (1849-1851) in compagnia di Gustave Flaubert tra Egitto, Siria e Palestina (pubblicando una selezione di 125 immagini), e dell’inglese Francis Frith, che viaggia negli stessi luoghi nel 1856 e pubblica con enorme successo due volumi con settanta immagini complessive, stampate e incollate a mano su ogni copia.
-                            
-                            In copertina: Francis Frith, ‘Statues of the Plain, Thebes’, 1857
-                                
                           </div>
                 
                           
-                          <div class="column1">
-                            La prima fotografia della storia (1826) è il tentativo di fissare la veduta da una finestra, sfruttando le capacità d’annerimento del bitume di Giudea su una lastra di peltro, con una posa di circa otto ore.
-                
-                            Il suo autore Nicéphore Niepce, interessato soprattutto alla riproduzione litografica, cerca un socio e lo trova in Philippe Daguerre, scenografo parigino ossessionato dalla riproduzione meccanica della realtà. Daguerre è già celebre nella capitale per i suoi spettacoli di diorama ed ha buone aderenze politiche.
-                
-                            VISTA DALLA FINESTRA A LE GRAS, LA PRIMA FOTOGRAFIA DELLA STORIA
-                            Quando mette a punto, insieme al figlio di Niepce, il dagherrotipo, il deputato Jean-François Aragon presenta l’invenzione all’Accademia delle Scienze (1839) chiedendo un vitalizio per i due inventori in cambio dell’acquisizione pubblica del brevetto.
-                            
-                            In quegli anni la fotografia è in realtà nell’aria. Dalla Gran Bretagna Henry Fox-Talbot si affretta a pubblicare la sua invenzione, il calotipo, un negativo fotografico su carta che permette la stampa di più copie. Fox-Talbot risolve così alcuni dei problemi più gravi del dagherrotipo, fragile e costoso nei materiali e soprattutto in copia unica, ma ineguagliabile per nitidezza.
-                            
-                            HENRY FOX TALBOTT
-                            Un altro parigino, Hippolyte Bayard ha sviluppato in contemporanea un propria tecnica che permette la riproduzione di più copie, ma Aragon, deciso a favorire Daguerre, lo allontana dalla ribalta: la foto più celebre di  Bayard realizzata con la sua tecnica è un autoritratto fotografico in cui appare come un annegato, esplicitando il senso sarcastico nella didascalia.
-                            
-                            È però uno scienziato a sancire l’avvento della fotografia e del suo nome (suoi anche i termini “negativo” e “positivo”): Sir John Herschel stabilisce con l’iposolfito di sodio il metodo di fissaggio dell’immagine latente, soluzione definitiva al problema della stabilità dell’immagine.
-                            
-                            Nel frattempo la fotografia viene in aiuto alla pittura codificando nel ritratto uno dei suoi campi di impiego e di espressione artistica. In Scozia è il pittore David Octavius Hill insieme a Robert Adamson a ricorrere alla fotografia per la preparazione di un grande affresco celebrativo di committenza pubblica (1843), dipinto presto dimenticato al contrario del vibrante ritratto della società scozzese (duemila fotografie) uscito dallo studio della coppia di artisti.
-                            
-                            Il genere è comunque destinato a crescere e a trovare grandi interpreti: in America è l’intraprendente Mathew Brady ad aprire lo studio più celebre a New York e a lasciarci i ritratti di Edgar Allan Poe e del giovane deputato Abraham Lincoln, la cui fotografia,  pubblicata sui volantini di propaganda distribuiti per l’elezione a presidente, ne favorirà la vittoria. A Parigi il ritrattista della cultura francese è Gaspard Félix de Tournachon, detto Nadar, autentico bohémien e celebre caricaturista prima di divenire fotografo.
-                            
-                            UN FOTORITRATTO DI LINCOLN DI MATHEW BRADY
-                            Coraggioso e intraprendente, quando il suo studio è ormai rinomato (Charles Baudelaire, Sarah Bernardt, Gérard de Nerval sono solo alcuni dei soggetti ritratti con sorprendente intensità), Nadar si avventura nell’impossibile impresa di fotografare con luce artificiale i sotterranei e le catacombe di Parigi. Appassionato di volo ascensionale (fonda una società per promuoverne la diffusione) inaugura anche la fotografia aerea pubblicando una serie di immagini di Parigi dall’alto riprese dal suo pallone, Le Géant.
-                            
-                            FOTORITRATTO BAUDELAIRE DI NADAR
-                            Altro naturale campo d’utilizzo della fotografia in questi primi anni è la documentazione di viaggi. L’archeologia, i cui misteri animano cultura e fantasie ottocentesche, è al centro dell’impresa fotografica dello scrittore Maxime Du Camp, che viaggia per tre anni (1849-1851) in compagnia di Gustave Flaubert tra Egitto, Siria e Palestina (pubblicando una selezione di 125 immagini), e dell’inglese Francis Frith, che viaggia negli stessi luoghi nel 1856 e pubblica con enorme successo due volumi con settanta immagini complessive, stampate e incollate a mano su ogni copia.
-                            
-                            In copertina: Francis Frith, ‘Statues of the Plain, Thebes’, 1857
-                                
+                          <div class="column1" id="zonaStoriaCuriosita">
+                           <p > Click sul bottone "Curiosità" per visualizzare il documento!</p>
+
                             </div>
+                            <div style="min-height: 1500px;"></div>
                         </div>
                     </div>
                 </div>
             </div>                
-        </main>                   
+        </main>
+        
+            <script>
+                // Script con JQuery per il caricamento dinamico sui div dei documenti html Antica,Moderna,Curiosita
+                 $(document).ready(function(){
+                    $("#bottoneAntica").click(function(){
+                        $("#zonaStoriaAntica").load("Antica.html", function(responseTxt, statusTxt, xhr){  
+                            if(statusTxt == "error") alert("Errore nel caricamento del file,"+xhr.status+":"+xhr.statusText);
+                            });
+                    });
+
+                    $("#bottoneModerna").click(function(){
+                       
+                        $("#zonaStoriaModerna").load("Moderna.html", function(responseTxt, statusTxt, xhr){
+                            
+                
+                            if(statusTxt == "error") alert("Errore nel caricamento del file,"+xhr.status+":"+xhr.statusText);
+                            });
+                    
+                    });
+
+                    $("#bottoneCuriosita").click(function(){
+                       
+                        $("#zonaStoriaCuriosita").load("Curiosita.html", function(responseTxt, statusTxt, xhr){
+                            
+                    
+                    if(statusTxt == "error") alert("Errore nel caricamento del file,"+xhr.status+":"+xhr.statusText);
+                    });
+                    });
+                });
+            </script>
+
+
+            </script>
+            </body>
+            </html>
+           
     </body>
 </html>

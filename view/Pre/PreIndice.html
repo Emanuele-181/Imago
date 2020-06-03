@@ -4,7 +4,7 @@
 
     <head>
        <title>Imago</title>
-
+        
         <!-- Link agli scripts -->
         <script src="../Script/cookies.js"></script>
 
@@ -17,7 +17,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptNavbarPopup.js"></script>
 
+
+       
         <!-- Sript per il reindirizzamento senza tag a. 
         viene invocata al clic delle card. -->
         <script type="text/javascript">
@@ -26,27 +30,47 @@
             }
         </script>
 
+        <style>
+            .overlay {
+                display: none;
+            }
+        </style>
+
     </head>
 
     <body>
+        <!--Navbar-->
+        
 
-        <div class="hero-image"></div>
+        <div class="hero-image">
+           
+        </div>
 
         <!-- Container principale della pagina -->
         <div id="principale" class="container">
+            <script> 
+                $(document).ready(function() {
+                    $( "#barra" ).load( "../Shared/Popup.html" );   
+                });
+            </script>
+            <div id="barra"> </div>
             <center>
-            <img src="../../utility/Img/logojo3.png" height="300px">
-        </center>
+                <img src="../../utility/Img/imagologo13-pre.png" >
+            </center>
 
             <!-- Container delle cards -->
             <div class="card-container">
-
+                
                 <!-- Card 1 -->
                 <div id="card1" class="card" onclick="redirect('../'+'Sito'+'/'+'HomeSito.html')">
                     <div class="hero-image-card" style="background-image: url(../../public/img/tramonto.jpg);"></div>
                     <div class="container">
                         <h1 class="card-font">Home</h1>
-                        <p>Descrizione da mettere per la pagina Home.</p>
+                        <p>
+                            Benvenuti su Imago.
+                            Visita il sito.
+                        </p>
+
                     </div>
                 </div>
 
@@ -64,21 +88,26 @@
 
                 <!-- Card 3 -->
                 <!-- Deve far uscire il popup, non c'è una pagina di registrazione -->
-                 <div id="card3" class="card" onclick="return checkSessionCookie()">
+                 <div id="card3" class="card" onclick="toggleLogin2()">
                     <div class="hero-image-card" style="background-image: url(../../public/img/macchinaFotografica2.jpg);"></div>
                     <div class="container">
                         <h1 class="card-font">Registrati</h1> 
                         <p>
-                            Registrati per poter utilizzare funzionalità premium
+                            Registrati per poter utilizzare funzionalit&aacute; premium
                             come il Tool di modifica delle foto!
-                            Cosa aspetti, è gratis!!!
+                            Cosa aspetti, &eacute; gratis!!!
                         </p>
                     </div>
                 </div>
 
             </div>
+            
 
         </div>
+
+        
+
+      
 
 
     </body>
