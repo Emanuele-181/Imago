@@ -49,17 +49,7 @@ var app=new Vue({
             this.totale=(this.prezzo2+this.iva);
 
         },
-        // svuota:function(){
-        //     this.contcarr=0;
-        //     this.modelli[this.seleziona].sel=0;
-        //     this.modelli[this.seleziona].dispo=this.modelli[this.seleziona].dispoiniz;
-        //     this.modelli[this.seleziona].maxnikon=this.modelli[this.seleziona].maxnikon;
-        //     this.modelli[this.seleziona].maxcanon=this.modelli[this.seleziona].maxcanon; 
-        //     this.modelli[this.seleziona].maxfuji= this.modelli[this.seleziona].maxfuji;
-        //     this.modelli[this.seleziona].pezmaxnikon=this.modelli[this.seleziona].pezmaxnikon;
-        //     this.modelli[this.seleziona].pezmaxcanon=this.modelli[this.seleziona].pezmaxcanon; 
-        //     this.modelli[this.seleziona].pezmaxfuji=this.modelli[this.seleziona].pezmaxfuji;
-        // }
+       
         paga(){
             this.contcarr=0;
             this.prezzo2=0;
