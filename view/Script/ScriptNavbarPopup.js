@@ -13,6 +13,8 @@ function riuscito(){
     alert("Pagamento effettuato con successo!");
 }
 
+
+// Sezione di controlli sulla form di registrazione 
 function checkNome(){
     if(!isNaN(document.formRegistrazione.nome.value)) {
         alert("Attenzione Il Nome NON può essere un numero!");
