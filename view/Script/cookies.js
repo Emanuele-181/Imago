@@ -9,9 +9,11 @@
 
 /* Controlla se un utente è loggato */
 function checkLogin(){
+
     if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
+        document.getElementsByTagName("body")[0].style.filter = "blur(10px)";
         alert('Per accedere a questa pagina devi registrarti o fare il login.');
-        if(window.history.length == 1){
+        if(window.history.length <= 2){
             window.location.replace('../Sito/HomeSito.html');
         }
         else{
@@ -19,6 +21,10 @@ function checkLogin(){
         }
         return false;
     }
+    /* else{
+        document.getElementById("imglogin").style.display="none";
+        document.getElementById("imglogout").style.display="flex";
+    } */
     return true;
 }
 
@@ -42,5 +48,19 @@ function localLoginFalse(){
     localStorage.logged = 'false';
 }
 
+function inverti(){
+    if(sessionStorage.logged != 'true' && localStorage.logged != 'true'){
+        document.getElementById("imglogin").style.display="flex";
+        document.getElementById("imglogout").style.display="none";
+    }
+    else{
+        document.getElementById("imglogin").style.display="none";
+        document.getElementById("imglogout").style.display="flex";
+    }
+}
 
-
+function logout(){
+    sessionLoginFalse();
+    localLoginFalse();
+    location.reload();
+}

@@ -1,8 +1,8 @@
 
 <html>
     <head>
-        <!-- Sezione Script -->
-        <title>Questa è la pagina dedicata alla storia della fotografia.</title>
+        
+        <title>Imago Tool</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,12 +10,14 @@
         <link rel="stylesheet" href="../../css/fontawesome-free-5.13.0-web/css/all.css">
         <meta charset="utf-8"/>
         
+        <!-- Sezione Script -->
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
         <script type="text/javascript" lang="javascript" src="../css/bootstrap.min.css"></script>
         <script type="text/javascript" lang="javascript" src="../../view/Script/ScriptHome.js"></script>
         <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
         <script src ="../Script/tool.js"></script>
+        <script src="../Script/cookies.js"></script>
 
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -32,6 +34,8 @@
             @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
             
+             /* @media è una regola che adatta la visione delle colonne in base alla grandezza del display del dispositivo(rende il sito responsive) */
+            /* block blocca l'elemento su una riga */
             @media (max-width: 640px) { 
                 .classeTesto {font-size:4rem; padding:60% 0 0 0} 
             } 
@@ -190,7 +194,7 @@
         </style>
     </head>
                 
-    <body onload="controlloPresenzaImg()">
+    <body onload="checkLogin(); controlloPresenzaImg()">
                         
         <!--Navbar-->
         <script> 
@@ -200,20 +204,22 @@
         </script>
         
         <div id="barra"> </div>
-    
+        <!-- Immagine navbar e titolo pagina -->
         <div class="view intro hm-purple-light" style="height: 370px;width:100%; position: absolute;top:0px;">
         <h1 class="classeTesto"align="right" style="color:whitesmoke;font-family: 'Spartan', sans-serif; ">TOOL</h1></div>
         
         
         
         <main  style="background-image: linear-gradient( rgb(150, 5, 49),rgba(8, 8, 4, 0.308),rgb(44, 26, 29)) ; min-height: 100%;padding-top: 380px;"> 
+            <!-- div introduttivo -->
             <div style="text-align: center; font-family: 'Julius Sans One', sans-serif;font-size:24px;">
                 <p>Questo è un Tool che consente la modifica in tempo reale delle tue foto!</p>
                 <p>Metti alla prova le conoscenze che hai acquisito tramite IMAGO </p>
             </div> 
             <center>
             <div style="background-color: rgba(245, 202, 202, 0.527); width: 96%;border-radius: 30px;box-shadow: 4px 4px 16px;">
-               
+            
+            <!-- Table contenente la foto caricata lato utente e le icone per la modifica della foto caricata -->
             <table align="center" cellpadding="10px" >
                 
                 
@@ -226,17 +232,18 @@
                             <br>
                             <div style="background-color: rgba(202, 142, 142, 0.507); border-radius: 100px;">
 
-                            
+                            <!-- Form per il caricamento della foto tramite caricaimmagine.php -->
                             <div id="formCarica" style="font-family:raleway; font-size: 2vh;color: rgb(36, 32, 32);">
                                 <form action="../Shared/caricaImmagine.php" method ="POST" enctype="multipart/form-data" onsubmit="blocca()"  >
                                 <br>
                                     <input  type="file" id="inputImg" name="inputImg" style="color: rgb(71, 68, 68);padding-left: 15vw">
                                     <br><br>
-                                <input id="btnCarica" type="submit" value="Carica" name="submit">
+                                <input id="btnCarica" style="color:black" type="submit" value="Carica" name="submit">
                                     <br>
                                     
                                 </form>
                             </div>
+                            <!-- Visualizzazione della foto caricata tramite funzione js -->
                             <button onclick="visualizzaImg()" style="font-family:raleway; font-size: 2vh; color: brown;">Visualizza</button>
                             <br>
                             <br>
@@ -246,27 +253,31 @@
                 </tr>
             
                 <tr>
+                    <!-- Sezione aumento o decremento luminosità tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella1">LUMINOSITÀ</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);" onclick="luminosità('+')"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);" onclick="luminosita('+')"></i>
                         <i class="fas fa-sun" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('+')"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosita('-')"></i>
                         
                     </th>
                     
                     <th>
                         <center> 
+                            <!-- Immagine caricata su questo div -->
                             <div id="Img" style="width:50vw; min-height: 40vh;">
                                 
                             </div>
                         </center>
                     
                      </th>
+
+                     <!-- Sezione aumento o decremento contrasto tramite funzione contenuta in tool.js -->
                      <th style="text-align: center;" class="column2">
                         <p class="categorieTabella1">CONTRASTO</p>
-                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('+')"></i>
+                        <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="contrasto('+')"></i>
                         <i class="fas fa-adjust" style="font-size: 5vw; color:white;"></i>
-                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="luminosità('-')"></i>
+                        <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="contrasto('-')"></i>
                     </th>
                 </tr>
                 
@@ -275,46 +286,53 @@
 
             <table align="center" cellpadding="20px">
                 <tr>
+                    <!-- Sezione aumento o decremento negativo tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">NEGATIVO</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="negativo('+')"></i>
                         <i class="fas fa-film" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="negativo('-')"></i>
                     </th>
+                    <!-- Sezione aumento o decremento saturazione tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SATURAZIONE</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="saturazione('+')"></i>
                         <i class="fas fa-fill" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="saturazione('-')"></i>
                     </th>
+                    <!-- Sezione aumento o decremento sfumatura tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SFUMATURA</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfumatura('+')"></i>
                         <i class="fas fa-cloud" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfumatura('-')"></i>
                     </th>
+                    <!-- Sezione aumento o decremento colore tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">COLORE</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="colore('+')"></i>
                         <i class="fas fa-rainbow" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 3vh;color: rgb(231, 93, 93);"onclick="colore('-')"></i>
                     </th>
+                    <!-- Sezione aumento o decremento sfocatura tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SFOCATURA</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfocatura('+')"></i>
                         <i class="fas fa-tint" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="sfocatura('-')"></i>
                     </th>
+                    <!-- Sezione aumento o decremento seppia tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">SEPPIA</p>
                         <i id="settaggi" class="fas fa-plus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="seppia('+')"></i>
                         <i class="fas fa-fish" style="font-size: 5vw; color:white;"></i>
                         <i id="settaggi" class="fas fa-minus" style="font-size: 2.5vh;color: rgb(231, 93, 93);"onclick="seppia('-')"></i>
                     </th>
+                    <!-- Sezione reset dei valori iniziali tramite funzione contenuta in tool.js -->
                     <th style="text-align: center;" class="column2">
                         <p class="categorieTabella">RESET</p>
                         
-                        <i class="fas fa-undo" style="font-size: 5vw; color:white; " onclick="reset()"></i>
+                        <i class="fas fa-undo" style="font-size: 5vw; color:white;cursor: pointer; " onclick="reset()"></i>
                         
                     </th>
 

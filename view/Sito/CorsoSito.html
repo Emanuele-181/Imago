@@ -3,7 +3,7 @@
     <head>
 
         <meta charset="utf-8"/>
-        <title>Corso</title>
+        <title>Imago Corso</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
        
         <link rel="stylesheet" href="../../css/Bootstrap/css/bootstrap.css">
@@ -11,6 +11,7 @@
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" lang="javascript" src="../../css/Bootstrap/js/bootstrap.js"></script>
+        <script src="../Script/cookies.js"></script>
         
        
         <script type="text/javascript" lang="javascript" src="../../css/fontawesome-free-5.13.0-web/css/all.css"></script>
@@ -160,7 +161,7 @@
     </head>
 
     <!--onload= "return checkLogin();"-->
-    <body class="sfondo" >
+    <body class="sfondo"  onload="checkLogin()">
           
         <!--Navbar-->
         <script> 
@@ -210,6 +211,7 @@
             <div id="zona-dinamica" style="min-height: 300px;">
             
                     <script>
+                        //funzione AJAX che permette di visualizzare  il documento html al click del button
                     var documenti = document.getElementsByTagName("button");
                     for (var i = 0; i < documenti.length; i++) {
                     documenti[i].onclick = caricaDocumento;
